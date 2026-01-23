@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light dark">
+  <title>Retainory — Optimize Your Study Practice</title>
+  <meta name="description" content="Boost retention and memory with personalized study sessions using science-backed learning techniques." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="icon" href="assets/favicon.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Ambient background -->
+  <div class="bg" aria-hidden="true">
+    <div class="bg__top-wave"></div>
+    <div class="bg__blob bg__blob--a"></div>
+    <div class="bg__blob bg__blob--b"></div>
+    <div class="bg__noise"></div>
+  </div>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="#">
+        <span class="brand__mark" aria-hidden="true">
+          <!-- Simple "R" mark with gradient -->
+          <svg viewBox="0 0 64 64" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="g" x1="8" y1="6" x2="58" y2="58" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6B5BFF"/>
+                <stop offset="0.28" stop-color="#3C8DFF"/>
+                <stop offset="0.55" stop-color="#22C6C5"/>
+                <stop offset="0.78" stop-color="#58E57E"/>
+                <stop offset="1" stop-color="#FFD66B"/>
+              </linearGradient>
+            </defs>
+            <path d="M14 50V14h19.5c9.1 0 16.5 6.2 16.5 15.3 0 8.2-5.8 13.4-13.2 14.8L50 50h-9.8L28.6 44H23v6h-9Zm9-14h9.5c4.3 0 7.6-2.3 7.6-6.7 0-4.5-3.3-6.8-7.6-6.8H23v13.5Z" fill="url(#g)"/>
+          </svg>
+        </span>
+        <span class="brand__text">Retainory</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a class="nav__link" href="#features">Features <span class="nav__caret">▾</span></a>
+        <a class="nav__link" href="#pricing">Pricing</a>
+        <a class="nav__link" href="#case-studies">Case Studies <span class="nav__caret">▾</span></a>
+        <a class="nav__link" href="#blog">Blog</a>
+        <a class="nav__link nav__link--muted" href="#login">Log in</a>
+      </nav>
+
+      <div class="header__cta">
+        <a class="btn btn--pill btn--primary" href="#get-started">
+          <span>Get Started</span>
+          <span class="btn__shine" aria-hidden="true"></span>
+        </a>
+
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu" hidden>
+      <div class="container mobile-menu__inner">
+        <a href="#features" class="mobile-menu__link">Features</a>
+        <a href="#pricing" class="mobile-menu__link">Pricing</a>
+        <a href="#case-studies" class="mobile-menu__link">Case Studies</a>
+        <a href="#blog" class="mobile-menu__link">Blog</a>
+        <a href="#login" class="mobile-menu__link mobile-menu__link--muted">Log in</a>
+        <a href="#get-started" class="btn btn--primary btn--full">Get Started</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__copy reveal">
+          <h1 class="hero__title">
+            Optimize Your<br>
+            <span class="hero__title-accent">Study Practice</span>
+          </h1>
+          <p class="hero__subtitle">
+            Boost retention and memory with personalized study sessions using proven learning techniques.
+          </p>
+
+          <div class="hero__actions">
+            <a class="btn btn--lg btn--primary" href="#get-started">
+              <span>Get Started</span>
+              <span class="btn__shine" aria-hidden="true"></span>
+            </a>
+
+            <a class="btn btn--lg btn--ghost" href="#watch-demo" aria-label="Watch demo">
+              <span class="btn__icon" aria-hidden="true">▶</span>
+              <span>Watch Demo</span>
+            </a>
+          </div>
+
+          <div class="hero__meta">
+            <div class="pill pill--soft">
+              <span class="dot dot--green"></span>
+              Science-backed practice
+            </div>
+            <div class="pill pill--soft">
+              <span class="dot dot--blue"></span>
+              Adaptive sessions
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__visual reveal">
+          <div class="glow-ring" aria-hidden="true"></div>
+
+          <div class="phone">
+            <div class="phone__frame" aria-hidden="true"></div>
+            <img
+              class="phone__img"
+              src="assets/retainory-phone.png"
+              alt="Retainory app preview on a phone"
+              loading="eager"
+            />
+            <div class="phone__shadow" aria-hidden="true"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__divider" aria-hidden="true"></div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features" class="section">
+      <div class="container">
+        <div class="section__heading reveal">
+          <h2 class="section__title">
+            Unlock Your <span class="gradient-text">Learning</span> Potential
+          </h2>
+          <p class="section__subtitle">
+            Retainory uses the latest science-backed techniques to help you study smarter, remember more, and track your progress.
+          </p>
+        </div>
+
+        <div class="cards cards--3">
+          <article class="card reveal">
+            <div class="card__icon">
+              <span class="icon icon--gradient" aria-hidden="true">⟲</span>
+            </div>
+            <h3 class="card__title">Adaptive Study Sessions</h3>
+            <p class="card__text">
+              Custom study plans tailored to your needs and learning pace.
+            </p>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__icon">
+              <span class="icon icon--gradient" aria-hidden="true">🧠</span>
+            </div>
+            <h3 class="card__title">Memory Enhancement</h3>
+            <p class="card__text">
+              Utilize spaced repetition for better long-term retention.
+            </p>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__icon">
+              <span class="icon icon--gradient" aria-hidden="true">📈</span>
+            </div>
+            <h3 class="card__title">Progress Tracking</h3>
+            <p class="card__text">
+              Monitor your improvement with detailed analytics.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="section section--tight">
+      <div class="container">
+        <div class="section__heading reveal">
+          <h2 class="section__title">How <span class="gradient-text">Retainory</span> Works</h2>
+          <p class="section__subtitle">Start your personalized study sessions with Retainory today!</p>
+        </div>
+
+        <div class="steps">
+          <article class="step reveal">
+            <div class="step__badge">
+              <span class="icon icon--gradient" aria-hidden="true">🎯</span>
+            </div>
+            <div class="step__body">
+              <h3 class="step__title">Set Your Goals</h3>
+              <p class="step__text">
+                Choose what you're studying for: a test, class, or personal learning.
+              </p>
+            </div>
+          </article>
+
+          <article class="step step--mid reveal">
+            <div class="step__badge">
+              <span class="icon icon--gradient" aria-hidden="true">⏱</span>
+            </div>
+            <div class="step__body">
+              <h3 class="step__title">Start Sessions</h3>
+              <p class="step__text">
+                Engage in smart, adaptive study sessions designed for efficient learning.
+              </p>
+            </div>
+          </article>
+
+          <article class="step reveal">
+            <div class="step__badge">
+              <span class="icon icon--gradient" aria-hidden="true">✅</span>
+            </div>
+            <div class="step__body">
+              <h3 class="step__title">Track Progress</h3>
+              <p class="step__text">
+                Review your stats and track improvement over time.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="get-started" class="cta">
+      <div class="container">
+        <div class="cta__panel reveal">
+          <div class="cta__bg" aria-hidden="true"></div>
+
+          <div class="cta__content">
+            <h2 class="cta__title">Ready to Boost Your Learning?</h2>
+            <p class="cta__text">Start your personalized study sessions with Retainory today!</p>
+
+            <div class="cta__actions">
+              <a class="btn btn--lg btn--primary" href="#download">
+                <span>Get Started</span>
+                <span class="btn__shine" aria-hidden="true"></span>
+              </a>
+              <a class="btn btn--lg btn--ghost btn--ghost-on-dark" href="#watch-demo">
+                <span class="btn__icon" aria-hidden="true">▶</span>
+                <span>Watch Demo</span>
+              </a>
+            </div>
+
+            <div class="cta__fineprint">
+              No credit card • Cancel anytime • iOS & Web
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="footer__brand">
+          <span class="brand__text brand__text--small">Retainory</span>
+          <span class="footer__muted">© <span id="year"></span> Retainory. All rights reserved.</span>
+        </div>
+        <div class="footer__links">
+          <a href="#privacy">Privacy</a>
+          <a href="#terms">Terms</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Scroll reveal (IntersectionObserver)
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (!prefersReduced) {
+      const els = document.querySelectorAll('.reveal');
+      const io = new IntersectionObserver((entries) => {
+        for (const e of entries) {
+          if (e.isIntersecting) {
+            e.target.classList.add('reveal--in');
+            io.unobserve(e.target);
+          }
+        }
+      }, { threshold: 0.12 });
+
+      els.forEach(el => io.observe(el));
+    } else {
+      document.querySelectorAll('.reveal').forEach(el => el.classList.add('reveal--in'));
+    }
+
+    // Mobile nav
+    const toggle = document.querySelector('.nav-toggle');
+    const mobile = document.querySelector('.mobile-menu');
+
+    toggle?.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!expanded));
+      mobile.hidden = expanded;
+      document.body.classList.toggle('no-scroll', !expanded);
+    });
+
+    mobile?.addEventListener('click', (e) => {
+      const a = e.target.closest('a');
+      if (!a) return;
+      toggle.setAttribute('aria-expanded', 'false');
+      mobile.hidden = true;
+      document.body.classList.remove('no-scroll');
+    });
+  </script>
+</body>
+</html>

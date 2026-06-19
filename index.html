@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="icon" href="assets/favicon.png" />
-  <link rel="stylesheet" href="styles.css?v=20260619-2" />
+  <link rel="stylesheet" href="styles.css?v=20260619-3" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -26,32 +26,48 @@
   </header>
 
   <main id="main">
-    <section class="hero" id="top">
-      <div class="container hero__grid">
-        <div class="hero__copy reveal">
-          <p class="eyebrow"><span></span> Test prep built around memory curves</p>
-          <h1>Set the curve.<br><span>Replace cramming with retention.</span></h1>
-          <p class="hero__subtitle">Retainory is an iOS study app that helps students review before they forget, track readiness, and optimize every session around their personal memory curve.</p>
-          <div class="hero__actions"><a class="btn btn--large btn--primary js-app-store-link" href="APP_STORE_LINK_PLACEHOLDER">Download on App Store</a><a class="btn btn--large btn--secondary" href="#memory-curve"><span class="play" aria-hidden="true"></span>Watch the curve</a></div>
-          <div class="hero__trust"><span>iPhone-first</span><span>Memory curve optimization</span><span>App Store handoff ready</span></div>
-        </div>
-
-        <div class="hero__visual reveal" aria-label="Retainory app dashboard preview">
-          <div class="dashboard" data-tilt-card>
-            <div class="dashboard__top"><span></span><span></span><span></span></div>
-            <div class="practice-card">
-              <div><p class="ui-label">Practice ready</p><strong>Now</strong><small>Final exam · Sep 28</small></div>
-              <div class="readiness-ring" style="--score:92"><svg viewBox="0 0 120 120" aria-hidden="true"><circle class="ring-bg" cx="60" cy="60" r="48"></circle><circle class="ring-value" cx="60" cy="60" r="48"></circle></svg><div><strong>92%</strong><span>readiness</span></div></div>
-            </div>
-            <div class="memory-card">
-              <div class="card-head"><div><p class="ui-label">Memory curve</p><strong>Retention path</strong></div><span class="metric">+28% vs cramming</span></div>
-              <svg class="mini-curve" viewBox="0 0 680 260" aria-hidden="true" preserveAspectRatio="none"><defs><linearGradient id="miniGradient" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#5B6CFF"/><stop offset=".36" stop-color="#22D3EE"/><stop offset=".72" stop-color="#65F29B"/><stop offset="1" stop-color="#FFD84D"/></linearGradient></defs><path class="grid-line" d="M40 66H640M40 132H640M40 198H640"></path><path class="ghost-line" d="M45 62 C155 150 210 214 290 202 C370 190 425 145 500 176 C560 200 610 226 638 228"></path><path class="active-line" d="M45 180 C118 78 166 70 222 112 C284 156 350 126 411 92 C478 54 558 72 638 54"></path><g class="curve-dots"><circle cx="45" cy="180" r="7"></circle><circle cx="222" cy="112" r="7"></circle><circle cx="411" cy="92" r="7"></circle><circle cx="638" cy="54" r="7"></circle></g></svg>
-              <div class="timeline"><span>Today</span><span>Review</span><span>Reinforce</span><span>Exam</span></div>
-            </div>
-            <div class="dashboard__bottom"><div class="next-session"><i></i><div><strong>Next best session</strong><span>18 min · 3 weak topics</span></div></div><a class="mock-cta js-app-store-link" href="APP_STORE_LINK_PLACEHOLDER">Start practice</a></div>
+    <section class="scroll-hero" id="top" data-hero-scroll>
+      <div class="scroll-hero__sticky">
+        <div class="container scroll-hero__layout">
+          <div class="scroll-hero__copy reveal" data-hero-title>
+            <p class="eyebrow"><span></span> Test prep built around memory curves</p>
+            <h1>Set the curve.<br><span>Replace cramming with retention.</span></h1>
+            <p class="hero__subtitle">Retainory helps students review before they forget, track readiness, and optimize every session around their personal memory curve.</p>
+            <div class="hero__actions"><a class="btn btn--large btn--primary js-app-store-link" href="APP_STORE_LINK_PLACEHOLDER">Download on App Store</a><a class="btn btn--large btn--secondary" href="#memory-curve"><span class="play" aria-hidden="true"></span>Watch the curve</a></div>
+            <div class="hero__trust"><span>iPhone-first</span><span>Adaptive study plan</span><span>Retention analytics</span></div>
           </div>
-          <div class="float-stat float-stat--a"><span>Review window</span><strong>Tonight</strong></div><div class="float-stat float-stat--b"><span>Focus</span><strong>Weak topics</strong></div>
+
+          <div class="phone-scene reveal" aria-label="Animated Retainory app preview">
+            <div class="phone-card" data-hero-phone>
+              <div class="phone-glow" aria-hidden="true"></div>
+              <div class="app-screen">
+                <div class="phone-status" aria-hidden="true"><strong>1:48</strong><div class="dynamic-island"><span class="island-icon"></span><span class="island-wave"></span></div><div class="status-icons"><span></span><span></span><span></span></div></div>
+                <div class="app-title">Retainory</div>
+
+                <section class="app-card practice-ready-card">
+                  <div><p class="app-label">Practice ready</p><h2>Now</h2><span>Math 2030</span><a class="app-button js-app-store-link" href="APP_STORE_LINK_PLACEHOLDER"><i></i>Start practice</a></div>
+                  <div class="app-readiness"><div class="sparkle">✦</div><strong>Readiness</strong></div>
+                </section>
+
+                <div class="insights-row"><h3>Insights</h3><button type="button">Math 2030 <span>⌄</span></button></div>
+
+                <section class="app-card study-plan-card">
+                  <div class="study-head"><h3>Study plan</h3><span>Adapts to your pace</span></div>
+                  <div class="calendar-top"><span>‹</span><strong>June 2026</strong><span>›</span></div>
+                  <div class="weekdays"><span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span></div>
+                  <div class="calendar-grid" aria-hidden="true">
+                    <span></span><b>1</b><b>2</b><b>3</b><b>4</b><b>5</b><b>6</b><b>7</b><b>8</b><b>9</b><b>10</b><b>11</b><b>12</b><b>13</b><b>14</b><b>15</b><b>16</b><b>17</b><b>18</b><b class="active-day">19<i></i></b><b>20</b><b>21</b><b>22</b><b>23</b><b>24</b><b>25</b><b>26</b><b>27</b><b>28</b><b>29</b><b>30</b>
+                  </div>
+                  <div class="legend"><span class="done">✓ Done</span><span class="missed">× Missed</span><span class="planned">● Planned</span></div>
+                </section>
+
+                <a class="wide-start js-app-store-link" href="APP_STORE_LINK_PLACEHOLDER"><i></i>Start practice</a>
+                <div class="tabbar" aria-hidden="true"><span>●<b>Profile</b></span><span class="active">⌂<b>Home</b></span><span>✓<b>More</b></span></div>
+              </div>
+            </div>
+          </div>
         </div>
+        <div class="scroll-cue" aria-hidden="true"><span></span> Scroll to lift the app</div>
       </div>
     </section>
 
@@ -86,6 +102,6 @@
 
   <footer class="footer"><div class="container footer__inner"><a class="brand brand--footer" href="#top"><span>Retainory</span></a><span>© <span id="year"></span> Retainory. All rights reserved.</span><div><a href="#privacy">Privacy</a><a href="#terms">Terms</a><a href="#contact">Contact</a></div></div></footer>
   <div class="mobile-sticky-cta" data-mobile-sticky><a class="btn btn--primary btn--full js-app-store-link" href="APP_STORE_LINK_PLACEHOLDER">Download app</a></div>
-  <script src="script.js?v=20260619-2" defer></script>
+  <script src="script.js?v=20260619-3" defer></script>
 </body>
 </html>

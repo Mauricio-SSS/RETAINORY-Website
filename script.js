@@ -75,10 +75,13 @@ dateInput?.addEventListener('change', updatePlanPreview);
 updatePlanPreview();
 
 document.querySelectorAll('.js-app-store-link').forEach((link) => {
-  link.addEventListener('click', () => {
-    if (link.getAttribute('href') === 'APP_STORE_LINK_PLACEHOLDER') {
-      link.setAttribute('aria-label', 'App Store link placeholder');
-    }
+  link.addEventListener('click', (event) => {
+    if (link.getAttribute('href') !== 'APP_STORE_LINK_PLACEHOLDER') return;
+    event.preventDefault();
+    link.setAttribute('aria-label', 'App Store link placeholder');
+    link.classList.add('is-pending');
+    document.querySelector('#download')?.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth' });
+    window.setTimeout(() => link.classList.remove('is-pending'), 900);
   });
 });
 

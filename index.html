@@ -3,75 +3,41 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#050711" />
+  <meta name="theme-color" content="#050505" />
   <title>Retainory — Set the Curve</title>
   <meta name="description" content="Students are not lazy. Most are just studying inside a broken system. Something new is coming August 4. Set the Curve." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=prelaunch-20260619" />
+  <link rel="stylesheet" href="styles.css?v=minimal-prelaunch-20260619" />
 </head>
 <body>
   <main class="prelaunch" aria-labelledby="main-title">
-    <div class="ambient" aria-hidden="true">
-      <span class="orb orb--one"></span>
-      <span class="orb orb--two"></span>
-      <span class="orb orb--three"></span>
-      <span class="curve curve--one"></span>
-      <span class="curve curve--two"></span>
-      <span class="grain"></span>
-    </div>
+    <nav class="topbar" aria-label="Retainory prelaunch navigation">
+      <a class="brand" href="/" aria-label="Retainory home">Retainory</a>
+      <a class="topbar-link" href="#waitlist">Sign up</a>
+    </nav>
 
-    <section class="hero-card">
-      <nav class="topbar" aria-label="Retainory prelaunch navigation">
-        <a class="brand" href="/" aria-label="Retainory home">
-          <span class="brand-mark">R</span>
-          <span>Retainory</span>
-        </a>
-        <a class="topbar-link" href="#waitlist">Request early access</a>
-      </nav>
+    <section class="hero" aria-label="Retainory prelaunch announcement">
+      <p class="date">August 4</p>
+      <h1 id="main-title">Students are not lazy.</h1>
+      <p class="statement">Most are just studying inside a broken system.</p>
+      <p class="arrival">Something new is coming August 4.</p>
+      <p class="signature">Set the Curve.</p>
 
-      <div class="hero-content">
-        <p class="status-pill"><span></span> Coming August 4</p>
-        <h1 id="main-title">Students are not lazy.</h1>
-        <p class="manifesto">Most are just studying inside a broken system.</p>
-        <p class="arrival">Something new is coming <strong>August 4.</strong></p>
-        <p class="signature">Set the Curve.</p>
-
-        <form id="waitlist" class="waitlist-form" action="WAITLIST_FORM_ENDPOINT" method="post" data-waitlist-form>
-          <label class="sr-only" for="email">Email address</label>
-          <input id="email" name="email" type="email" autocomplete="email" placeholder="Enter your email" required />
-          <button type="submit">Sign up</button>
-          <p class="form-note" data-form-note>Join the waitlist for launch updates and early access.</p>
-        </form>
-      </div>
-
-      <div class="signal-panel" aria-hidden="true">
-        <div class="signal-header">
-          <span>Memory signal</span>
-          <strong>Aug 4</strong>
-        </div>
-        <svg viewBox="0 0 700 240" preserveAspectRatio="none">
-          <defs>
-            <linearGradient id="signalGradient" x1="0" y1="0" x2="1" y2="0">
-              <stop stop-color="#5B6CFF" />
-              <stop offset="0.34" stop-color="#22D3EE" />
-              <stop offset="0.7" stop-color="#65F29B" />
-              <stop offset="1" stop-color="#FFD84D" />
-            </linearGradient>
-          </defs>
-          <path class="signal-grid" d="M30 54H670M30 112H670M30 170H670M120 34V202M300 34V202M480 34V202M670 34V202" />
-          <path class="signal-ghost" d="M35 54 C130 120 180 186 270 178 C362 170 438 110 530 150 C595 178 638 194 668 202" />
-          <path class="signal-line" d="M35 176 C98 78 156 70 222 108 C292 148 348 126 420 78 C508 20 596 54 668 40" />
-          <circle cx="35" cy="176" r="8" />
-          <circle cx="222" cy="108" r="8" />
-          <circle cx="420" cy="78" r="8" />
-          <circle cx="668" cy="40" r="8" />
-        </svg>
-      </div>
+      <form id="waitlist" class="waitlist-form" action="WAITLIST_FORM_ENDPOINT" method="post" data-waitlist-form>
+        <label class="sr-only" for="email">Email address</label>
+        <input id="email" name="email" type="email" autocomplete="email" placeholder="Email address" required />
+        <button type="submit">Sign up</button>
+        <p class="form-note" data-form-note>Get notified when Retainory opens.</p>
+      </form>
     </section>
+
+    <footer class="footer">
+      <span>© 2026 Retainory</span>
+    </footer>
   </main>
 
-  <script src="script.js?v=prelaunch-20260619" defer></script>
+  <script src="script.js?v=minimal-prelaunch-20260619" defer></script>
 </body>
 </html>

@@ -104,13 +104,24 @@ h1 {
 }
 
 .waitlist-form {
-  width: min(460px, 100%);
-  margin: 48px auto 0;
+  width: min(520px, 100%);
+  margin: 50px auto 0;
   display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 10px;
-  padding-bottom: 2px;
-  border-bottom: 1px solid var(--line);
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 8px;
+  padding: 7px;
+  border: 1px solid var(--line-soft);
+  border-radius: 999px;
+  background: rgba(247, 247, 245, 0.055);
+  box-shadow: inset 0 1px 0 rgba(247, 247, 245, 0.06), 0 18px 44px rgba(0, 0, 0, 0.22);
+  transition: border-color 180ms ease, background 180ms ease, box-shadow 180ms ease;
+}
+
+.waitlist-form:focus-within {
+  border-color: rgba(247, 247, 245, 0.34);
+  background: rgba(247, 247, 245, 0.075);
+  box-shadow: inset 0 1px 0 rgba(247, 247, 245, 0.08), 0 22px 56px rgba(0, 0, 0, 0.28);
 }
 
 .sr-only {
@@ -127,33 +138,44 @@ h1 {
 
 .waitlist-form input {
   min-width: 0;
+  height: 50px;
   border: 0;
   outline: 0;
   background: transparent;
   color: var(--text);
-  padding: 14px 0;
-  font-size: 16px;
+  padding: 0 16px 0 18px;
+  font-size: 15px;
+  letter-spacing: -0.01em;
 }
 
 .waitlist-form input::placeholder { color: var(--soft); }
 
 .waitlist-form button {
+  height: 50px;
   border: 0;
-  background: transparent;
-  color: var(--text);
-  padding: 14px 0 14px 18px;
+  border-radius: 999px;
+  background: var(--text);
+  color: var(--bg);
+  padding: 0 22px;
+  font-size: 14px;
   font-weight: 800;
   white-space: nowrap;
+  transition: transform 160ms ease, opacity 160ms ease, background 160ms ease;
 }
 
-.waitlist-form button:hover { opacity: 0.72; }
+.waitlist-form button:hover {
+  transform: translateY(-1px);
+  opacity: 0.88;
+}
+
+.waitlist-form button:active { transform: translateY(0); }
 
 .form-note {
   grid-column: 1 / -1;
-  margin: 10px 0 0;
+  margin: 8px 10px 4px;
   color: var(--soft);
   font-size: 13px;
-  text-align: left;
+  text-align: center;
 }
 
 .form-note.is-warning { color: rgba(247, 247, 245, 0.72); }
@@ -171,13 +193,20 @@ h1 {
   .statement,
   .arrival { margin-left: 0; }
   .waitlist-form {
+    width: 100%;
     margin-left: 0;
     grid-template-columns: 1fr;
-    gap: 0;
+    gap: 8px;
+    padding: 8px;
+    border-radius: 24px;
+  }
+  .waitlist-form input {
+    height: 52px;
+    padding: 0 14px;
   }
   .waitlist-form button {
-    justify-self: start;
-    padding-left: 0;
+    width: 100%;
+    height: 52px;
   }
-  .form-note { text-align: left; }
+  .form-note { text-align: center; }
 }

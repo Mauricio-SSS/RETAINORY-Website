@@ -14,6 +14,19 @@
     Array.prototype.forEach.call(nodes || [], callback);
   }
 
+  function clamp(value, min, max) {
+    return Math.min(Math.max(value, min), max);
+  }
+
+  function injectHeroStyles() {
+    if (document.querySelector('link[data-hero-scroll-style]')) return;
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = 'hero-scroll.css?v=20260619-3';
+    link.setAttribute('data-hero-scroll-style', 'true');
+    document.head.appendChild(link);
+  }
+
   function revealEverything() {
     forEachNode(document.querySelectorAll('.reveal, [data-curve-stage]'), function (element) {
       element.classList.add('is-visible');
@@ -66,6 +79,51 @@
     });
 
     window.setTimeout(revealEverything, 500);
+  }
+
+  function initScrollHero() {
+    var section = document.querySelector('[data-hero-scroll]');
+    var phone = document.querySelector('[data-hero-phone]');
+    var title = document.querySelector('[data-hero-title]');
+    if (!section || !phone) return;
+
+    function update() {
+      var rect = section.getBoundingClientRect();
+      var maxTravel = Math.max(section.offsetHeight - window.innerHeight, 1);
+      var progress = clamp(-rect.top / maxTravel, 0, 1);
+      var isMobile = window.innerWidth <= 768;
+
+      if (prefersReducedMotion) progress = 1;
+
+      var rotate = 20 * (1 - progress);
+      var scale = isMobile ? 0.72 + (0.22 * progress) : 1.05 - (0.05 * progress);
+      var phoneY = isMobile ? 48 - (88 * progress) : 86 - (128 * progress);
+      var titleY = -112 * progress;
+      var titleOpacity = 1 - (0.22 * progress);
+
+      phone.style.setProperty('--phone-rotate', rotate.toFixed(2) + 'deg');
+      phone.style.setProperty('--phone-scale', scale.toFixed(3));
+      phone.style.setProperty('--phone-y', phoneY.toFixed(2) + 'px');
+
+      if (title) {
+        title.style.setProperty('--title-y', titleY.toFixed(2) + 'px');
+        title.style.setProperty('--title-opacity', titleOpacity.toFixed(3));
+      }
+    }
+
+    var ticking = false;
+    function requestUpdate() {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(function () {
+        update();
+        ticking = false;
+      });
+    }
+
+    update();
+    window.addEventListener('scroll', requestUpdate, { passive: true });
+    window.addEventListener('resize', requestUpdate);
   }
 
   function daysUntilExam(value) {
@@ -133,9 +191,11 @@
   }
 
   function init() {
+    injectHeroStyles();
     initYear();
     initMobileNav();
     initRevealAnimations();
+    initScrollHero();
     initPlanPreview();
     initAppStorePlaceholders();
     initHeader();

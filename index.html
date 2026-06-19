@@ -10,7 +10,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="icon" href="assets/favicon.png" />
-  <link rel="stylesheet" href="styles.css?v=20260619-3" />
+  <link rel="stylesheet" href="styles.css?v=20260619-4" />
+  <link rel="stylesheet" href="hero-scroll.css?v=20260619-4" data-hero-scroll-style />
+  <link rel="stylesheet" href="hero-real.css?v=20260619-4" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -34,35 +36,53 @@
             <h1>Set the curve.<br><span>Replace cramming with retention.</span></h1>
             <p class="hero__subtitle">Retainory helps students review before they forget, track readiness, and optimize every session around their personal memory curve.</p>
             <div class="hero__actions"><a class="btn btn--large btn--primary js-app-store-link" href="APP_STORE_LINK_PLACEHOLDER">Download on App Store</a><a class="btn btn--large btn--secondary" href="#memory-curve"><span class="play" aria-hidden="true"></span>Watch the curve</a></div>
-            <div class="hero__trust"><span>iPhone-first</span><span>Adaptive study plan</span><span>Retention analytics</span></div>
+            <div class="hero__trust"><span>iPhone-first</span><span>Real memory curve</span><span>Readiness tracking</span></div>
           </div>
 
           <div class="phone-scene reveal" aria-label="Animated Retainory app preview">
-            <div class="phone-card" data-hero-phone>
+            <div class="phone-card real-phone-card" data-hero-phone>
               <div class="phone-glow" aria-hidden="true"></div>
-              <div class="app-screen">
-                <div class="phone-status" aria-hidden="true"><strong>1:48</strong><div class="dynamic-island"><span class="island-icon"></span><span class="island-wave"></span></div><div class="status-icons"><span></span><span></span><span></span></div></div>
-                <div class="app-title">Retainory</div>
+              <div class="app-screen real-app-screen">
+                <div class="real-status" aria-hidden="true"><strong>4:55</strong><div class="real-status-icons"><i></i><i></i><i></i></div></div>
+                <div class="real-app-title">Retainory</div>
 
-                <section class="app-card practice-ready-card">
-                  <div><p class="app-label">Practice ready</p><h2>Now</h2><span>Math 2030</span><a class="app-button js-app-store-link" href="APP_STORE_LINK_PLACEHOLDER"><i></i>Start practice</a></div>
-                  <div class="app-readiness"><div class="sparkle">✦</div><strong>Readiness</strong></div>
-                </section>
-
-                <div class="insights-row"><h3>Insights</h3><button type="button">Math 2030 <span>⌄</span></button></div>
-
-                <section class="app-card study-plan-card">
-                  <div class="study-head"><h3>Study plan</h3><span>Adapts to your pace</span></div>
-                  <div class="calendar-top"><span>‹</span><strong>June 2026</strong><span>›</span></div>
-                  <div class="weekdays"><span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span></div>
-                  <div class="calendar-grid" aria-hidden="true">
-                    <span></span><b>1</b><b>2</b><b>3</b><b>4</b><b>5</b><b>6</b><b>7</b><b>8</b><b>9</b><b>10</b><b>11</b><b>12</b><b>13</b><b>14</b><b>15</b><b>16</b><b>17</b><b>18</b><b class="active-day">19<i></i></b><b>20</b><b>21</b><b>22</b><b>23</b><b>24</b><b>25</b><b>26</b><b>27</b><b>28</b><b>29</b><b>30</b>
+                <section class="real-practice-card">
+                  <div class="real-practice-copy">
+                    <p>Practice ready</p>
+                    <h2>Now</h2>
+                    <span>Math 670 · Exam Jun 26</span>
+                    <a class="real-start-small js-app-store-link" href="APP_STORE_LINK_PLACEHOLDER"><i></i>Start practice</a>
                   </div>
-                  <div class="legend"><span class="done">✓ Done</span><span class="missed">× Missed</span><span class="planned">● Planned</span></div>
+                  <div class="real-readiness-ring" aria-label="98 percent readiness"><span>98%</span><b>Readiness</b></div>
                 </section>
 
-                <a class="wide-start js-app-store-link" href="APP_STORE_LINK_PLACEHOLDER"><i></i>Start practice</a>
-                <div class="tabbar" aria-hidden="true"><span>●<b>Profile</b></span><span class="active">⌂<b>Home</b></span><span>✓<b>More</b></span></div>
+                <div class="real-insights-row"><h3>Insights</h3><button type="button">Math 670 <span>⌄</span></button></div>
+
+                <section class="real-memory-card">
+                  <div class="real-memory-head"><h3>Memory curve</h3><span>⚑ Jun 26</span></div>
+                  <p class="real-projected">Projected on exam day</p>
+                  <div class="real-score-row"><strong>98%</strong><em>↗ +98% vs no practice</em></div>
+                  <div class="real-tabs"><span>7d</span><span>14d</span><span>30d</span><b>All</b></div>
+                  <div class="real-chart" aria-hidden="true">
+                    <div class="chart-tag chart-tag--today">Today</div>
+                    <div class="chart-tag chart-tag--exam">⚑ Exam</div>
+                    <svg viewBox="0 0 640 300" preserveAspectRatio="none">
+                      <defs><linearGradient id="realCurveGradient" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#6d63ff"/><stop offset=".35" stop-color="#33c7ff"/><stop offset=".7" stop-color="#54ec96"/><stop offset="1" stop-color="#ffe35b"/></linearGradient></defs>
+                      <path class="real-grid" d="M42 62H604M42 152H604M42 252H604M42 48V256M98 48V256M292 48V256M604 48V256"></path>
+                      <rect x="43" y="52" width="56" height="203" rx="2" class="real-band"></rect>
+                      <rect x="292" y="52" width="86" height="203" rx="2" class="real-band"></rect>
+                      <path class="real-no-practice" d="M42 252H604"></path>
+                      <path class="real-curve-line" d="M42 58 C82 72 86 78 98 61 C188 74 250 82 292 70 C386 70 496 76 604 74"></path>
+                      <path class="real-left-line" d="M42 58V252"></path>
+                      <circle cx="42" cy="58" r="7"></circle><circle cx="98" cy="61" r="7"></circle><circle cx="292" cy="70" r="7"></circle>
+                    </svg>
+                    <div class="chart-axis"><span>Jun 19</span><span>100%</span><span>80%</span><span>50%</span><span>0%</span></div>
+                  </div>
+                  <div class="real-legend"><span class="plan">Plan</span><span class="none">No practice</span><span class="session">Session</span></div>
+                </section>
+
+                <a class="real-wide-start js-app-store-link" href="APP_STORE_LINK_PLACEHOLDER"><i></i>Start practice</a>
+                <div class="real-tabbar" aria-hidden="true"><span>●<b>Profile</b></span><span class="active">⌂<b>Home</b></span><span>✓<b>More</b></span></div>
               </div>
             </div>
           </div>
@@ -102,6 +122,6 @@
 
   <footer class="footer"><div class="container footer__inner"><a class="brand brand--footer" href="#top"><span>Retainory</span></a><span>© <span id="year"></span> Retainory. All rights reserved.</span><div><a href="#privacy">Privacy</a><a href="#terms">Terms</a><a href="#contact">Contact</a></div></div></footer>
   <div class="mobile-sticky-cta" data-mobile-sticky><a class="btn btn--primary btn--full js-app-store-link" href="APP_STORE_LINK_PLACEHOLDER">Download app</a></div>
-  <script src="script.js?v=20260619-3" defer></script>
+  <script src="script.js?v=20260619-4" defer></script>
 </body>
 </html>

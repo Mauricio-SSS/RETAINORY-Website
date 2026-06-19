@@ -1,5 +1,7 @@
 (function () {
   var root = document.documentElement;
+  root.classList.add('js');
+
   var prefersReducedMotion = false;
 
   try {
@@ -51,8 +53,6 @@
       return;
     }
 
-    revealEverything();
-
     var observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (!entry.isIntersecting) return;
@@ -64,6 +64,8 @@
     forEachNode(elements, function (element) {
       observer.observe(element);
     });
+
+    window.setTimeout(revealEverything, 500);
   }
 
   function daysUntilExam(value) {
@@ -131,7 +133,6 @@
   }
 
   function init() {
-    revealEverything();
     initYear();
     initMobileNav();
     initRevealAnimations();
@@ -145,6 +146,4 @@
   } else {
     init();
   }
-
-  window.setTimeout(revealEverything, 350);
 }());

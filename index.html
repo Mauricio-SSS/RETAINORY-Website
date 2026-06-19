@@ -3,316 +3,89 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="color-scheme" content="light dark">
-  <title>Retainory — Optimize Your Study Practice</title>
-  <meta name="description" content="Boost retention and memory with personalized study sessions using science-backed learning techniques." />
-
+  <meta name="theme-color" content="#070A14" />
+  <title>Retainory — Test Prep Built Around Memory Retention</title>
+  <meta name="description" content="Retainory is an iOS study app that replaces cramming with adaptive test prep built around memory curves, retention, and readiness." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="icon" href="assets/favicon.png" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
-  <!-- Ambient background -->
-  <div class="bg" aria-hidden="true">
-    <div class="bg__top-wave"></div>
-    <div class="bg__blob bg__blob--a"></div>
-    <div class="bg__blob bg__blob--b"></div>
-    <div class="bg__noise"></div>
-  </div>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="site-bg" aria-hidden="true"><div class="site-bg__grid"></div><div class="orb orb--a"></div><div class="orb orb--b"></div><div class="orb orb--c"></div><div class="noise"></div></div>
 
-  <header class="header">
+  <header class="header" data-header>
     <div class="container header__inner">
-      <a class="brand" href="#">
-        <span class="brand__mark" aria-hidden="true">
-          <!-- Simple "R" mark with gradient -->
-          <svg viewBox="0 0 64 64" width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="g" x1="8" y1="6" x2="58" y2="58" gradientUnits="userSpaceOnUse">
-                <stop stop-color="#6B5BFF"/>
-                <stop offset="0.28" stop-color="#3C8DFF"/>
-                <stop offset="0.55" stop-color="#22C6C5"/>
-                <stop offset="0.78" stop-color="#58E57E"/>
-                <stop offset="1" stop-color="#FFD66B"/>
-              </linearGradient>
-            </defs>
-            <path d="M14 50V14h19.5c9.1 0 16.5 6.2 16.5 15.3 0 8.2-5.8 13.4-13.2 14.8L50 50h-9.8L28.6 44H23v6h-9Zm9-14h9.5c4.3 0 7.6-2.3 7.6-6.7 0-4.5-3.3-6.8-7.6-6.8H23v13.5Z" fill="url(#g)"/>
-          </svg>
-        </span>
-        <span class="brand__text">Retainory</span>
-      </a>
-
-      <nav class="nav" aria-label="Primary">
-        <a class="nav__link" href="#features">Features <span class="nav__caret">▾</span></a>
-        <a class="nav__link" href="#pricing">Pricing</a>
-        <a class="nav__link" href="#case-studies">Case Studies <span class="nav__caret">▾</span></a>
-        <a class="nav__link" href="#blog">Blog</a>
-        <a class="nav__link nav__link--muted" href="#login">Log in</a>
-      </nav>
-
-      <div class="header__cta">
-        <a class="btn btn--pill btn--primary" href="#get-started">
-          <span>Get Started</span>
-          <span class="btn__shine" aria-hidden="true"></span>
-        </a>
-
-        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
+      <a class="brand" href="#top" aria-label="Retainory home"><span class="brand__mark" aria-hidden="true">R</span><span>Retainory</span></a>
+      <nav class="nav" aria-label="Primary navigation"><a href="#how">How it works</a><a href="#memory-curve">Memory curve</a><a href="#students">For students</a><a href="#science">Science</a></nav>
+      <div class="header__actions"><a class="nav-store" href="APP_STORE_LINK_PLACEHOLDER">App Store</a><a class="btn btn--small btn--primary js-app-store-link" href="APP_STORE_LINK_PLACEHOLDER">Download app</a><button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" data-nav-toggle><span></span><span></span><span></span></button></div>
     </div>
-
-    <!-- Mobile menu -->
-    <div class="mobile-menu" hidden>
-      <div class="container mobile-menu__inner">
-        <a href="#features" class="mobile-menu__link">Features</a>
-        <a href="#pricing" class="mobile-menu__link">Pricing</a>
-        <a href="#case-studies" class="mobile-menu__link">Case Studies</a>
-        <a href="#blog" class="mobile-menu__link">Blog</a>
-        <a href="#login" class="mobile-menu__link mobile-menu__link--muted">Log in</a>
-        <a href="#get-started" class="btn btn--primary btn--full">Get Started</a>
-      </div>
-    </div>
+    <div class="mobile-menu" hidden data-mobile-menu><div class="container mobile-menu__inner"><a href="#how">How it works</a><a href="#memory-curve">Memory curve</a><a href="#students">For students</a><a href="#science">Science</a><a class="btn btn--primary btn--full js-app-store-link" href="APP_STORE_LINK_PLACEHOLDER">Download on App Store</a></div></div>
   </header>
 
-  <main>
-    <!-- HERO -->
-    <section class="hero">
+  <main id="main">
+    <section class="hero" id="top">
       <div class="container hero__grid">
         <div class="hero__copy reveal">
-          <h1 class="hero__title">
-            Optimize Your<br>
-            <span class="hero__title-accent">Study Practice</span>
-          </h1>
-          <p class="hero__subtitle">
-            Boost retention and memory with personalized study sessions using proven learning techniques.
-          </p>
-
-          <div class="hero__actions">
-            <a class="btn btn--lg btn--primary" href="#get-started">
-              <span>Get Started</span>
-              <span class="btn__shine" aria-hidden="true"></span>
-            </a>
-
-            <a class="btn btn--lg btn--ghost" href="#watch-demo" aria-label="Watch demo">
-              <span class="btn__icon" aria-hidden="true">▶</span>
-              <span>Watch Demo</span>
-            </a>
-          </div>
-
-          <div class="hero__meta">
-            <div class="pill pill--soft">
-              <span class="dot dot--green"></span>
-              Science-backed practice
-            </div>
-            <div class="pill pill--soft">
-              <span class="dot dot--blue"></span>
-              Adaptive sessions
-            </div>
-          </div>
+          <p class="eyebrow"><span></span> Test prep built around memory curves</p>
+          <h1>Set the curve.<br><span>Replace cramming with retention.</span></h1>
+          <p class="hero__subtitle">Retainory is an iOS study app that helps students review before they forget, track readiness, and optimize every session around their personal memory curve.</p>
+          <div class="hero__actions"><a class="btn btn--large btn--primary js-app-store-link" href="APP_STORE_LINK_PLACEHOLDER">Download on App Store</a><a class="btn btn--large btn--secondary" href="#memory-curve"><span class="play" aria-hidden="true"></span>Watch the curve</a></div>
+          <div class="hero__trust"><span>iPhone-first</span><span>Memory curve optimization</span><span>App Store link placeholder</span></div>
         </div>
 
-        <div class="hero__visual reveal">
-          <div class="glow-ring" aria-hidden="true"></div>
-
-          <div class="phone">
-            <div class="phone__frame" aria-hidden="true"></div>
-            <img
-              class="phone__img"
-              src="assets/retainory-phone.png"
-              alt="Retainory app preview on a phone"
-              loading="eager"
-            />
-            <div class="phone__shadow" aria-hidden="true"></div>
+        <div class="hero__visual reveal" aria-label="Retainory app dashboard preview">
+          <div class="dashboard" data-tilt-card>
+            <div class="dashboard__top"><span></span><span></span><span></span></div>
+            <div class="practice-card">
+              <div><p class="ui-label">Practice ready</p><strong>Now</strong><small>Final exam · Sep 28</small></div>
+              <div class="readiness-ring" style="--score:92"><svg viewBox="0 0 120 120" aria-hidden="true"><circle class="ring-bg" cx="60" cy="60" r="48"></circle><circle class="ring-value" cx="60" cy="60" r="48"></circle></svg><div><strong>92%</strong><span>readiness</span></div></div>
+            </div>
+            <div class="memory-card">
+              <div class="card-head"><div><p class="ui-label">Memory curve</p><strong>Retention path</strong></div><span class="metric">+28% vs cramming</span></div>
+              <svg class="mini-curve" viewBox="0 0 680 260" aria-hidden="true" preserveAspectRatio="none"><defs><linearGradient id="miniGradient" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#5B6CFF"/><stop offset=".36" stop-color="#22D3EE"/><stop offset=".72" stop-color="#65F29B"/><stop offset="1" stop-color="#FFD84D"/></linearGradient></defs><path class="grid-line" d="M40 66H640M40 132H640M40 198H640"></path><path class="ghost-line" d="M45 62 C155 150 210 214 290 202 C370 190 425 145 500 176 C560 200 610 226 638 228"></path><path class="active-line" d="M45 180 C118 78 166 70 222 112 C284 156 350 126 411 92 C478 54 558 72 638 54"></path><g class="curve-dots"><circle cx="45" cy="180" r="7"></circle><circle cx="222" cy="112" r="7"></circle><circle cx="411" cy="92" r="7"></circle><circle cx="638" cy="54" r="7"></circle></g></svg>
+              <div class="timeline"><span>Today</span><span>Review</span><span>Reinforce</span><span>Exam</span></div>
+            </div>
+            <div class="dashboard__bottom"><div class="next-session"><i></i><div><strong>Next best session</strong><span>18 min · 3 weak topics</span></div></div><a class="mock-cta js-app-store-link" href="APP_STORE_LINK_PLACEHOLDER">Start practice</a></div>
           </div>
+          <div class="float-stat float-stat--a"><span>Review window</span><strong>Tonight</strong></div><div class="float-stat float-stat--b"><span>Focus</span><strong>Weak topics</strong></div>
         </div>
       </div>
-
-      <div class="hero__divider" aria-hidden="true"></div>
     </section>
 
-    <!-- FEATURES -->
-    <section id="features" class="section">
+    <section class="section curve-lab" id="memory-curve">
       <div class="container">
-        <div class="section__heading reveal">
-          <h2 class="section__title">
-            Unlock Your <span class="gradient-text">Learning</span> Potential
-          </h2>
-          <p class="section__subtitle">
-            Retainory uses the latest science-backed techniques to help you study smarter, remember more, and track your progress.
-          </p>
-        </div>
-
-        <div class="cards cards--3">
-          <article class="card reveal">
-            <div class="card__icon">
-              <span class="icon icon--gradient" aria-hidden="true">⟲</span>
-            </div>
-            <h3 class="card__title">Adaptive Study Sessions</h3>
-            <p class="card__text">
-              Custom study plans tailored to your needs and learning pace.
-            </p>
-          </article>
-
-          <article class="card reveal">
-            <div class="card__icon">
-              <span class="icon icon--gradient" aria-hidden="true">🧠</span>
-            </div>
-            <h3 class="card__title">Memory Enhancement</h3>
-            <p class="card__text">
-              Utilize spaced repetition for better long-term retention.
-            </p>
-          </article>
-
-          <article class="card reveal">
-            <div class="card__icon">
-              <span class="icon icon--gradient" aria-hidden="true">📈</span>
-            </div>
-            <h3 class="card__title">Progress Tracking</h3>
-            <p class="card__text">
-              Monitor your improvement with detailed analytics.
-            </p>
-          </article>
+        <div class="section-heading reveal"><p class="kicker">Signature experience</p><h2>Your memory has a curve. Retainory helps you control it.</h2><p>Make the value obvious: traditional cramming fades, while optimized review points keep retention high through test day.</p></div>
+        <div class="curve-stage reveal" data-curve-stage>
+          <div class="curve-stage__top"><div><p class="ui-label">Bend the forgetting curve</p><strong>Predicted exam readiness</strong></div><div class="curve-score"><span>64%</span><span>→</span><strong>91%</strong></div></div>
+          <svg class="curve-visual" viewBox="0 0 1100 460" role="img" aria-label="Memory curve comparison" preserveAspectRatio="none"><defs><linearGradient id="curveGradient" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#5B6CFF"/><stop offset=".34" stop-color="#22D3EE"/><stop offset=".68" stop-color="#65F29B"/><stop offset="1" stop-color="#FFD84D"/></linearGradient></defs><g class="curve-grid"><path d="M70 70H1030M70 165H1030M70 260H1030M70 355H1030"></path><path d="M70 65V390M310 65V390M550 65V390M790 65V390M1030 65V390"></path></g><path class="curve-fill" d="M76 300 C170 168 240 150 315 205 C405 270 465 226 548 166 C660 86 790 118 910 94 C970 82 1015 72 1034 68 L1034 392 L76 392 Z"></path><path class="curve-line curve-line--cram" d="M76 82 C160 128 222 220 310 285 C410 360 500 374 585 348 C720 306 850 356 1034 382"></path><path class="curve-line curve-line--retainory" d="M76 300 C170 168 240 150 315 205 C405 270 465 226 548 166 C660 86 790 118 910 94 C970 82 1015 72 1034 68"></path><g class="curve-points"><g><circle cx="76" cy="300" r="9"></circle><text x="76" y="280">Today</text></g><g><circle cx="315" cy="205" r="9"></circle><text x="315" y="185">Review scheduled</text></g><g><circle cx="548" cy="166" r="9"></circle><text x="548" y="146">Weak topic reinforced</text></g><g><circle cx="910" cy="94" r="9"></circle><text x="910" y="74">Readiness increased</text></g><g><circle cx="1034" cy="68" r="9"></circle><text x="1034" y="48">Exam protected</text></g></g><g class="curve-axis"><text x="75" y="430">Today</text><text x="310" y="430">Review</text><text x="550" y="430">Reinforce</text><text x="790" y="430">Final push</text><text x="1005" y="430">Exam</text></g></svg>
+          <div class="curve-legend"><span><i class="legend-dot legend-dot--active"></i> Retainory optimized review</span><span><i class="legend-dot legend-dot--muted"></i> Traditional cramming decay</span></div>
         </div>
       </div>
     </section>
 
-    <!-- HOW IT WORKS -->
-    <section class="section section--tight">
-      <div class="container">
-        <div class="section__heading reveal">
-          <h2 class="section__title">How <span class="gradient-text">Retainory</span> Works</h2>
-          <p class="section__subtitle">Start your personalized study sessions with Retainory today!</p>
-        </div>
-
-        <div class="steps">
-          <article class="step reveal">
-            <div class="step__badge">
-              <span class="icon icon--gradient" aria-hidden="true">🎯</span>
-            </div>
-            <div class="step__body">
-              <h3 class="step__title">Set Your Goals</h3>
-              <p class="step__text">
-                Choose what you're studying for: a test, class, or personal learning.
-              </p>
-            </div>
-          </article>
-
-          <article class="step step--mid reveal">
-            <div class="step__badge">
-              <span class="icon icon--gradient" aria-hidden="true">⏱</span>
-            </div>
-            <div class="step__body">
-              <h3 class="step__title">Start Sessions</h3>
-              <p class="step__text">
-                Engage in smart, adaptive study sessions designed for efficient learning.
-              </p>
-            </div>
-          </article>
-
-          <article class="step reveal">
-            <div class="step__badge">
-              <span class="icon icon--gradient" aria-hidden="true">✅</span>
-            </div>
-            <div class="step__body">
-              <h3 class="step__title">Track Progress</h3>
-              <p class="step__text">
-                Review your stats and track improvement over time.
-              </p>
-            </div>
-          </article>
-        </div>
+    <section class="section plan-builder" id="how">
+      <div class="container plan-grid">
+        <div class="plan-copy reveal"><p class="kicker">Conversion-first UX</p><h2>Start with the student's test, then hand off to the App Store.</h2><p>The homepage should behave like the first step of Retainory: choose a goal, preview the retention path, then download the iOS app to save and continue.</p><ul class="check-list"><li>Personalized before sign-up.</li><li>One focused conversion action.</li><li>Clear App Store placeholder ready to replace.</li></ul></div>
+        <form class="selector-card reveal" data-plan-form><div class="selector-card__header"><p class="ui-label">Retention plan preview</p><strong>What are you preparing for?</strong></div><div class="goal-grid" role="radiogroup" aria-label="Study goal"><button type="button" class="goal-chip is-active" data-goal="Final exam">Final exam</button><button type="button" class="goal-chip" data-goal="SAT / ACT">SAT / ACT</button><button type="button" class="goal-chip" data-goal="MCAT">MCAT</button><button type="button" class="goal-chip" data-goal="Class quiz">Class quiz</button><button type="button" class="goal-chip" data-goal="Certification">Certification</button><button type="button" class="goal-chip" data-goal="Other test">Other</button></div><label class="date-field" for="exam-date"><span>When is your test?</span><input id="exam-date" name="exam-date" type="date" /></label><div class="plan-output" aria-live="polite" data-plan-output></div><a class="btn btn--primary btn--full js-app-store-link" href="APP_STORE_LINK_PLACEHOLDER">Download app to save plan</a><p class="fineprint">Replace APP_STORE_LINK_PLACEHOLDER when the App Store listing is live.</p></form>
       </div>
     </section>
 
-    <!-- CTA -->
-    <section id="get-started" class="cta">
-      <div class="container">
-        <div class="cta__panel reveal">
-          <div class="cta__bg" aria-hidden="true"></div>
+    <section class="section race" id="students"><div class="container"><div class="section-heading reveal"><p class="kicker">Retention race</p><h2>While others cram, your retention compounds.</h2><p>A premium performance loop: set the goal, practice before decay, and walk in ready.</p></div><div class="race-grid"><article class="race-card reveal"><span>01</span><h3>Set your exam goal</h3><p>Pick the test and date. Retainory builds a schedule around the deadline.</p><div><strong>2 min</strong><small>plan setup</small></div></article><article class="race-card race-card--featured reveal"><span>02</span><h3>Practice before memory drops</h3><p>Sessions surface topics most likely to fade and reinforce them at the right time.</p><div><strong>+28%</strong><small>retention lift</small></div></article><article class="race-card reveal"><span>03</span><h3>Walk in ready</h3><p>Track readiness, weak topics, and final review timing before the exam.</p><div><strong>91%</strong><small>readiness target</small></div></article></div></div></section>
 
-          <div class="cta__content">
-            <h2 class="cta__title">Ready to Boost Your Learning?</h2>
-            <p class="cta__text">Start your personalized study sessions with Retainory today!</p>
+    <section class="section comparison"><div class="container"><div class="section-heading reveal"><p class="kicker">Positioning</p><h2>Cramming is a guess. Retainory is a system.</h2></div><div class="comparison-grid"><article class="compare-card compare-card--muted reveal"><span>Old way</span><h3>Cramming</h3><ul><li>Study everything at once</li><li>Forget what you reviewed too early</li><li>No clear readiness score</li><li>Stress spikes near exam day</li></ul></article><article class="compare-card compare-card--active reveal"><span>Retainory way</span><h3>Optimization</h3><ul><li>Review at the right time</li><li>Focus on weak topics first</li><li>Track exam readiness</li><li>Build retention before test day</li></ul></article></div></div></section>
 
-            <div class="cta__actions">
-              <a class="btn btn--lg btn--primary" href="#download">
-                <span>Get Started</span>
-                <span class="btn__shine" aria-hidden="true"></span>
-              </a>
-              <a class="btn btn--lg btn--ghost btn--ghost-on-dark" href="#watch-demo">
-                <span class="btn__icon" aria-hidden="true">▶</span>
-                <span>Watch Demo</span>
-              </a>
-            </div>
+    <section class="section product-preview"><div class="container"><div class="section-heading reveal"><p class="kicker">App experience</p><h2>Know exactly what to study next.</h2><p>Every visual reinforces the same promise: less guessing, more retention, clearer readiness.</p></div><div class="preview-grid"><article class="preview-card reveal"><p class="ui-label">Practice ready</p><h3>Start the next best session</h3><div class="preview-practice"><strong>Now</strong><span>Final exam · Sep 28</span><a class="mock-cta js-app-store-link" href="APP_STORE_LINK_PLACEHOLDER">Start practice</a></div></article><article class="preview-card preview-card--wide reveal"><p class="ui-label">Memory curve</p><h3>See retention rise over time</h3><svg class="preview-sparkline" viewBox="0 0 420 150" aria-hidden="true" preserveAspectRatio="none"><path d="M10 112 C70 44 120 38 160 68 C210 104 250 72 292 46 C340 16 380 28 410 20"></path><circle cx="160" cy="68" r="6"></circle><circle cx="292" cy="46" r="6"></circle><circle cx="410" cy="20" r="6"></circle></svg></article><article class="preview-card reveal"><p class="ui-label">Insights</p><h3>Track what needs attention</h3><div class="insight-list"><span><b>Weakest topic</b> Enzyme kinetics</span><span><b>Best streak</b> 6 days</span><span><b>Predicted readiness</b> 87%</span></div></article></div></div></section>
 
-            <div class="cta__fineprint">
-              No credit card • Cancel anytime • iOS & Web
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <section class="section science" id="science"><div class="container"><div class="section-heading reveal"><p class="kicker">Science-backed, student-friendly</p><h2>Built around how memory actually works.</h2></div><div class="science-grid"><article class="science-card reveal"><i class="science-icon science-icon--curve"></i><h3>Memory curves</h3><p>Track how retention changes as time passes.</p></article><article class="science-card reveal"><i class="science-icon science-icon--repeat"></i><h3>Spaced repetition</h3><p>Review before knowledge fades.</p></article><article class="science-card reveal"><i class="science-icon science-icon--adaptive"></i><h3>Adaptive practice</h3><p>Spend more time on what you are likely to forget.</p></article><article class="science-card reveal"><i class="science-icon science-icon--ready"></i><h3>Readiness analytics</h3><p>Know when you are actually prepared.</p></article></div></div></section>
 
-    <footer class="footer">
-      <div class="container footer__inner">
-        <div class="footer__brand">
-          <span class="brand__text brand__text--small">Retainory</span>
-          <span class="footer__muted">© <span id="year"></span> Retainory. All rights reserved.</span>
-        </div>
-        <div class="footer__links">
-          <a href="#privacy">Privacy</a>
-          <a href="#terms">Terms</a>
-          <a href="#contact">Contact</a>
-        </div>
-      </div>
-    </footer>
+    <section class="final-cta" id="download"><div class="container"><div class="final-panel reveal"><div><p class="kicker">Download Retainory</p><h2>Set your curve before your next test.</h2><p>Create a personalized retention plan and start your first optimized study session from the iOS app.</p><a class="btn btn--large btn--primary js-app-store-link" href="APP_STORE_LINK_PLACEHOLDER">Download on App Store</a><span class="final-note">App Store link placeholder ready to replace.</span></div><div class="cta-visual" aria-hidden="true"><div class="cta-ring"></div><div class="cta-score"><strong>100%</strong><span>ready</span></div></div></div></div></section>
   </main>
 
-  <script>
-    // Year
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Scroll reveal (IntersectionObserver)
-    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-    if (!prefersReduced) {
-      const els = document.querySelectorAll('.reveal');
-      const io = new IntersectionObserver((entries) => {
-        for (const e of entries) {
-          if (e.isIntersecting) {
-            e.target.classList.add('reveal--in');
-            io.unobserve(e.target);
-          }
-        }
-      }, { threshold: 0.12 });
-
-      els.forEach(el => io.observe(el));
-    } else {
-      document.querySelectorAll('.reveal').forEach(el => el.classList.add('reveal--in'));
-    }
-
-    // Mobile nav
-    const toggle = document.querySelector('.nav-toggle');
-    const mobile = document.querySelector('.mobile-menu');
-
-    toggle?.addEventListener('click', () => {
-      const expanded = toggle.getAttribute('aria-expanded') === 'true';
-      toggle.setAttribute('aria-expanded', String(!expanded));
-      mobile.hidden = expanded;
-      document.body.classList.toggle('no-scroll', !expanded);
-    });
-
-    mobile?.addEventListener('click', (e) => {
-      const a = e.target.closest('a');
-      if (!a) return;
-      toggle.setAttribute('aria-expanded', 'false');
-      mobile.hidden = true;
-      document.body.classList.remove('no-scroll');
-    });
-  </script>
+  <footer class="footer"><div class="container footer__inner"><a class="brand brand--footer" href="#top"><span>Retainory</span></a><span>© <span id="year"></span> Retainory. All rights reserved.</span><div><a href="#privacy">Privacy</a><a href="#terms">Terms</a><a href="#contact">Contact</a></div></div></footer>
+  <div class="mobile-sticky-cta" data-mobile-sticky><a class="btn btn--primary btn--full js-app-store-link" href="APP_STORE_LINK_PLACEHOLDER">Download app</a></div>
+  <script src="script.js" defer></script>
 </body>
 </html>

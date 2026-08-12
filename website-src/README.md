@@ -209,3 +209,19 @@ not claim one. If such a toggle is added, say so under "Your choices and rights"
 
 Retention ("up to 30 days") matches Cloud Logging's default `_Default` bucket retention.
 If that bucket is reconfigured, update the policy to match.
+
+## Keeping the terms honest
+
+Section 2 of `terms.html` states a three-tier age policy — under 13 may not use Retainory,
+13–17 may not use AI generation, 18+ get everything. Only the second tier is enforced in
+code: `AIEligibility.swift` gates generation on 18+, but the picker in
+`AgeEligibilityGateView.swift` floors at 13 with no under-13 block, so a younger user just
+selects 13.
+
+That is why the section says **"you may not use Retainory"** and never "we block". A
+prohibition on the user holds as a contract term whatever the binary does; a claim about
+the software's behaviour has to be true. **Do not rewrite it to assert that the app blocks
+under-13s** unless the picker gains that block first.
+
+The page is titled *Terms of Service*, but `Localizable.xcstrings` labels the in-app link
+*Terms of Use*. Same URL, so nothing breaks — align them the next time either is touched.

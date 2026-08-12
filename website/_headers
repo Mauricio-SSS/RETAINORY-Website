@@ -1,20 +1,26 @@
 # Cloudflare Pages reads this file at deploy time and applies these response headers.
-# Everything here is static HTML/CSS with no scripts and no external requests, so the
-# policy can be maximally restrictive — if a future page needs an external asset, this
-# is the file that has to change first.
+# Everything HERE is static HTML/CSS with no scripts of our own and no external requests
+# we chose to make — the policy stays maximally restrictive beyond the one exception below.
 #
 # `font-src 'self'` was added for the self-hosted Sora subset in /fonts, which the
-# landing page needs for its display type. There is still no `script-src`: the site
-# ships no JavaScript, and the landing page's motion is CSS scroll-driven animation,
-# so `default-src 'none'` continues to block scripts outright. Keep it that way —
-# every path on that page is pre-computed precisely so no script is required.
+# landing page needs for its display type. The site itself still ships no JavaScript:
+# the landing page's motion is CSS scroll-driven animation, and every path on that page
+# is pre-computed precisely so no script of ours is required.
+#
+# `script-src`/`connect-src` for static.cloudflareinsights.com exist for exactly one
+# thing: the Cloudflare Web Analytics beacon, which the zone's dashboard (not this repo)
+# injects into every response. It is not code we wrote or can remove from here — turning
+# it off is a Cloudflare dashboard setting, not a deploy. With Web Analytics left on
+# deliberately, this opens the narrowest possible hole for it rather than leaving it
+# silently blocked (which just wastes a request) or opening default-src wide. See
+# "Third-party analytics" in privacy.html for the disclosure this pairs with.
 
 /*
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: geolocation=(), microphone=(), camera=(), interest-cohort=()
-  Content-Security-Policy: default-src 'none'; style-src 'self'; font-src 'self'; img-src 'self' data:; form-action 'none'; frame-ancestors 'none'; base-uri 'none'
+  Content-Security-Policy: default-src 'none'; style-src 'self'; font-src 'self'; img-src 'self' data:; script-src https://static.cloudflareinsights.com; connect-src https://cloudflareinsights.com https://static.cloudflareinsights.com; form-action 'none'; frame-ancestors 'none'; base-uri 'none'
   # .app is on the HSTS preload list, so browsers already force HTTPS. Sending this
   # anyway covers non-preloaded aliases and keeps the header set consistent.
   Strict-Transport-Security: max-age=31536000; includeSubDomains

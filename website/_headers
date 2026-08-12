@@ -1,0 +1,20 @@
+# Cloudflare Pages reads this file at deploy time and applies these response headers.
+# Everything here is static HTML/CSS with no scripts and no external requests, so the
+# policy can be maximally restrictive — if a future page needs an external asset, this
+# is the file that has to change first.
+#
+# `font-src 'self'` was added for the self-hosted Sora subset in /fonts, which the
+# landing page needs for its display type. There is still no `script-src`: the site
+# ships no JavaScript, and the landing page's motion is CSS scroll-driven animation,
+# so `default-src 'none'` continues to block scripts outright. Keep it that way —
+# every path on that page is pre-computed precisely so no script is required.
+
+/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=(), interest-cohort=()
+  Content-Security-Policy: default-src 'none'; style-src 'self'; font-src 'self'; img-src 'self' data:; form-action 'none'; frame-ancestors 'none'; base-uri 'none'
+  # .app is on the HSTS preload list, so browsers already force HTTPS. Sending this
+  # anyway covers non-preloaded aliases and keeps the header set consistent.
+  Strict-Transport-Security: max-age=31536000; includeSubDomains

@@ -32,199 +32,1180 @@
 
     <main id="main" class="doc">
       <h1>Privacy Policy</h1>
-      <p class="updated">Last updated: 5 August 2026</p>
+      <p class="updated">Last updated: 12 August 2026</p>
 
       <div class="callout">
         <p>
-          <strong>The short version.</strong> Retainory has no accounts and no
-          third-party analytics or advertising SDKs. Your study data —
-          objectives, flashcards, schedules, and review history — is stored on
-          your device and is never uploaded. The only things that leave your
-          device are material you explicitly submit for flashcard generation,
-          and anonymous usage events that are not linked to you.
+          <strong>The short version.</strong> Retainory has no user accounts,
+          no advertising, and no third-party analytics or advertising SDKs.
+          Your normal study data — including your objectives, saved
+          flashcards, review history, ratings, and scheduling state — stays on
+          your iPhone and is not uploaded to Retainory.
+        </p>
+        <p>
+          Information leaves your device in limited situations: when an
+          eligible user intentionally submits material for AI flashcard
+          generation; when the app sends limited usage events associated with
+          a random installation identifier; and when technical information is
+          processed to secure the service, prevent abuse, enforce generation
+          limits, and verify genuine copies of the app.
+        </p>
+        <p>
+          Retainory does not sell your personal information, does not share it
+          for cross-context behavioral advertising, and does not track you
+          across other companies' apps or websites.
         </p>
       </div>
 
-      <h2>Who we are</h2>
+      <h2>1. Who we are</h2>
       <p>
-        Retainory ("we", "us") publishes the Retainory app for iOS. You can
-        reach us at
-        <a href="mailto:support@retainory.com">support@retainory.com</a>.
+        Retainory is a study and spaced-repetition application operated by
+        Mauricio Salinas, an individual, from Chicago, Illinois, United
+        States.
       </p>
-
-      <h2>What stays on your device</h2>
       <p>
-        The following never leaves your iPhone. We cannot see it, and we have
-        no copy of it:
+        In this Privacy Policy, "Retainory," "we," "us," and "our" refer to
+        Mauricio Salinas in his capacity as the operator of Retainory.
       </p>
+      <p>
+        For purposes of privacy laws that use the term "controller," Mauricio
+        Salinas is the controller of personal data processed by Retainory
+        unless applicable law provides otherwise.
+      </p>
+      <p>You may contact us about privacy at:</p>
       <ul>
-        <li>Your study objectives and subjects</li>
-        <li>Your flashcards and their contents</li>
-        <li>Review history, ratings, and scheduling state</li>
-        <li>App settings and preferences</li>
-      </ul>
-      <p>
-        Because there is no account and no server-side copy, deleting the app
-        deletes this data permanently. There is no backup or restore on our
-        side.
-      </p>
-
-      <h2>What is sent to us</h2>
-
-      <h3>Material you submit for flashcard generation</h3>
-      <p>
-        When you ask Retainory to generate flashcards from a PDF or from text
-        you paste, that content is sent to our server, which forwards it to
-        Google's Gemini API to produce the cards. This happens only when you
-        explicitly start a generation.
-      </p>
-      <p>
-        We process this content in memory to fulfil the request. We do not
-        write it to a database or to disk, and it is not associated with you
-        or with any identifier that we can trace back to you. Google's
-        handling of the content is governed by their terms — see
-        <a href="#subprocessors">Service providers</a> below.
-      </p>
-      <p>
-        Please don't submit material you consider sensitive or confidential,
-        or material you don't have the right to share.
-      </p>
-
-      <h3>Anonymous usage events</h3>
-      <p>
-        The app sends us events describing how features are used — for
-        example, that an onboarding step completed, or that a generation
-        succeeded or failed. These events contain:
-      </p>
-      <ul>
-        <li>
-          A random identifier generated when you install the app (an
-          "installation ID"). It is not your Apple ID, your device ID, or your
-          advertising identifier, and it is not linked to your identity.
-        </li>
-        <li>
-          The name of the event, which flow it belongs to, whether it
-          succeeded or failed, timestamps, and internal request IDs.
-        </li>
-      </ul>
-      <p>
-        These events do not contain your notes, your flashcards, or their
-        contents. We use them only to find broken flows and to understand
-        which features are used. Reinstalling the app generates a new
-        installation ID, which severs any link to prior events.
-      </p>
-
-      <h3>Device integrity checks</h3>
-      <p>
-        To stop automated abuse of the flashcard generation service, the app
-        uses Apple's App Attest. Your device produces a cryptographic
-        attestation proving the request came from a genuine, unmodified copy
-        of Retainory. We store the resulting public key identifier. It
-        contains no personal information and cannot be used to identify you or
-        your device outside this service.
-      </p>
-
-      <h2>What we never do</h2>
-      <ul>
-        <li>We do not track you across other apps or websites.</li>
-        <li>We do not show ads.</li>
-        <li>We do not sell or share your data with data brokers.</li>
-        <li>
-          We do not use third-party analytics, attribution, or advertising
-          SDKs.
-        </li>
-        <li>We do not ask for your contacts, photos, or location.</li>
+        <li>Email: <a href="mailto:retainory@gmail.com">retainory@gmail.com</a></li>
+        <li>Website: <a href="/">retainory.com</a></li>
       </ul>
 
-      <h2 id="subprocessors">Service providers</h2>
+      <h2>2. Scope of this Privacy Policy</h2>
       <p>
-        We use a small number of providers to run the service. They process
-        data only to deliver it on our behalf:
+        This Privacy Policy explains how Retainory handles information when
+        you use the Retainory iOS application and the online services
+        necessary to operate it.
       </p>
-      <ul>
-        <li>
-          <strong>Google Cloud (Cloud Run)</strong> — hosts our server and
-          stores its operational logs.
-        </li>
-        <li>
-          <strong>Google Gemini API</strong> — generates flashcards from
-          material you submit.
-        </li>
-        <li>
-          <strong>Apple</strong> — distributes the app and provides App
-          Attest. Any App Store data Apple collects is governed by Apple's
-          privacy policy, not this one.
-        </li>
-      </ul>
-
-      <h2>How long we keep things</h2>
-      <ul>
-        <li>
-          Material submitted for generation: processed in memory and discarded
-          once your flashcards are returned. It is not retained.
-        </li>
-        <li>
-          Usage events and server logs: retained for up to 30 days, then
-          deleted automatically.
-        </li>
-        <li>
-          App Attest key identifiers: retained while the app remains
-          installed and in use.
-        </li>
-      </ul>
-
-      <h2>Your choices and rights</h2>
       <p>
-        Because we hold no account and no profile, most data-subject requests
-        resolve simply:
+        It does not govern Apple's independent processing of information
+        through the App Store, Apple ID, Apple devices, or other Apple
+        services. Apple's handling of that information is governed by Apple's
+        own privacy policies and agreements.
       </p>
+      <p>
+        Our <a href="/terms">Terms of Service</a> separately govern your use
+        of Retainory.
+      </p>
+
+      <h2>3. Retainory has no user accounts</h2>
+      <p>Retainory currently does not require:</p>
       <ul>
-        <li>
-          <strong>Deletion.</strong> Deleting the app removes all your study
-          data, since it exists only on your device. Deleting and reinstalling
-          also discards your installation ID, so any earlier usage events can
-          no longer be connected to your new install.
-        </li>
-        <li>
-          <strong>Access.</strong> If you believe we hold data about you and
-          want a copy or its deletion, email
-          <a href="mailto:support@retainory.com">support@retainory.com</a>.
-          Please note that because usage events carry only a random
-          installation ID, we generally have no way to link any record to you
-          as an individual, and so may be unable to identify data as yours.
-        </li>
+        <li>an account;</li>
+        <li>a username;</li>
+        <li>a password;</li>
+        <li>sign-in;</li>
+        <li>an email address to use the app; or</li>
+        <li>a server-side user profile.</li>
       </ul>
       <p>
-        If you are in the EEA or UK, our legal basis for processing generation
-        content is performance of our agreement with you, and for usage events
-        it is our legitimate interest in maintaining and improving the app.
+        We therefore do not maintain a conventional customer account database
+        that identifies individual Retainory users.
       </p>
 
-      <h2>Children</h2>
+      <h2>4. Study data that stays on your device</h2>
       <p>
-        Retainory is not directed at children under 13, and we do not
-        knowingly collect personal information from them. If you believe a
-        child has provided us information, contact us and we will delete it.
+        Retainory is designed so that your ordinary study library remains
+        local to your iPhone.
+      </p>
+      <p>
+        The following information is stored locally on your device and is not
+        transmitted to Retainory's servers as part of normal manual study and
+        review functionality:
+      </p>
+      <ul>
+        <li>your study objectives and subjects;</li>
+        <li>your saved flashcards and their contents;</li>
+        <li>manually created questions and answers;</li>
+        <li>
+          AI-generated flashcards after they have been returned to and saved
+          on your device;
+        </li>
+        <li>your review history;</li>
+        <li>your review ratings;</li>
+        <li>your FSRS scheduling state;</li>
+        <li>your spaced-repetition schedule; and</li>
+        <li>your app settings and preferences.</li>
+      </ul>
+      <p>Retainory does not maintain a server-side copy of that study library.</p>
+      <p>
+        We cannot ordinarily see, search, retrieve, or restore that locally
+        stored study data.
+      </p>
+      <p>
+        Retainory currently provides no Retainory-operated cloud
+        synchronization, cloud backup, account recovery, or study-data
+        restoration service.
+      </p>
+      <p>
+        If you delete Retainory, erase or lose your device, reset your device,
+        or otherwise lose the app's local storage, Retainory cannot restore
+        your study library for you.
+      </p>
+      <p>
+        Any device-level backup or restoration functionality independently
+        provided by Apple is controlled by Apple and your device settings, not
+        by Retainory.
       </p>
 
-      <h2>International transfers</h2>
+      <h2>5. Age eligibility</h2>
       <p>
-        Our servers are operated in the United States. If you use Retainory
-        from elsewhere, the limited data described above is processed there.
+        Retainory uses an age eligibility step before determining which
+        features you may access.
+      </p>
+      <p>The intended eligibility structure is:</p>
+      <ul>
+        <li><strong>Under 13:</strong> Retainory is not available for use.</li>
+        <li>
+          <strong>Ages 13 through 17:</strong> users may access eligible
+          manual, on-device study functionality, including manual flashcard
+          creation, review, and spaced repetition, but may not use AI-powered
+          flashcard generation.
+        </li>
+        <li>
+          <strong>Age 18 and older:</strong> users may access manual features
+          and, subject to availability and other restrictions, AI-powered
+          flashcard generation.
+        </li>
+      </ul>
+      <p>Your age selection is processed locally on your device.</p>
+      <p>
+        Retainory does not transmit your exact age or date of birth to our
+        backend, include it in telemetry, send it to Google, or include it in
+        an AI prompt.
+      </p>
+      <p>
+        After the age eligibility process is completed, Retainory needs to
+        retain only the local eligibility state required to determine whether
+        AI features are available. Retainory does not need to retain your
+        exact age or date of birth for this purpose.
+      </p>
+      <p>
+        The age eligibility process is a self-declared eligibility mechanism
+        unless Retainory expressly states otherwise. We do not represent that
+        a user's identity or age has been independently verified.
       </p>
 
-      <h2>Changes to this policy</h2>
+      <h2>6. Material submitted for AI flashcard generation</h2>
+
+      <h3>6.1 When content leaves your device</h3>
       <p>
-        If we change this policy, we will update the date at the top of this
-        page. Retainory links to this page from its Profile and About screens,
-        so the version you reach from the app is always the current one.
+        If you are eligible for AI functionality and intentionally request AI
+        flashcard generation, the material you submit must leave your device
+        so the request can be processed.
+      </p>
+      <p>This may include:</p>
+      <ul>
+        <li>text that you paste into Retainory; or</li>
+        <li>a supported PDF document that you choose to submit.</li>
+      </ul>
+      <p>Retainory currently supports PDF submissions of up to 10 MB.</p>
+      <p>
+        Nothing is submitted to the AI generation service merely because it
+        exists in your local Retainory study library.
+      </p>
+      <p>Transmission occurs when you intentionally initiate an AI generation request.</p>
+
+      <h3>6.2 How generation works</h3>
+      <p>Submitted generation material is transmitted to Retainory's backend.</p>
+      <p>
+        The backend currently runs on Google Cloud Run in the United States,
+        in the <code>us-central1</code> region.
+      </p>
+      <p>
+        Retainory's backend forwards the generation material to Google's
+        Gemini API so that flashcard question-and-answer content and related
+        generation results can be produced.
+      </p>
+      <p>The resulting flashcards are returned to your device.</p>
+
+      <h3>6.3 What Retainory keeps</h3>
+      <p>
+        Retainory's application backend is designed to process submitted
+        generation material in memory.
+      </p>
+      <p>
+        Retainory does not intentionally write the submitted PDF or pasted
+        study material to our application database or persistent application
+        storage.
+      </p>
+      <p>
+        Once the request has been serviced, Retainory does not maintain a
+        persistent server-side copy of the submitted study material.
+      </p>
+      <p>
+        Flashcards that you choose to save after generation are stored locally
+        on your device.
       </p>
 
-      <h2>Contact</h2>
+      <h2>7. Google's processing of AI generation content</h2>
       <p>
-        Questions about this policy:
-        <a href="mailto:support@retainory.com">support@retainory.com</a>.
+        Retainory currently accesses the Gemini API through a Google Cloud
+        Project associated with an active Cloud Billing account.
       </p>
+      <p>
+        Under Google's terms applicable to that configuration as of the date
+        of this Privacy Policy, Retainory's Gemini API access is treated as a
+        paid service for Google's data-use provisions.
+      </p>
+      <p>
+        Under those current paid-service terms, Google states that prompts and
+        responses submitted through the paid Gemini API are not used to
+        improve Google's products.
+      </p>
+      <p>
+        Google nevertheless states that, for paid services, it may log prompts
+        and responses for a limited period for purposes including detecting
+        and preventing prohibited use, maintaining service safety and
+        security, and complying with required legal or regulatory
+        disclosures.
+      </p>
+      <p>
+        Google may also process technical and operational information
+        associated with providing the Gemini API, such as authentication
+        details, service usage information, operational status, safety-filter
+        events, errors, performance metrics, device or token identifiers where
+        applicable, and IP addresses under Google's applicable terms.
+      </p>
+      <p>Provider terms and practices can change.</p>
+      <p>
+        If a change to our AI provider or its data-handling terms materially
+        changes how information submitted through Retainory is processed, we
+        will update this Privacy Policy as appropriate.
+      </p>
+
+      <h2>8. Sensitive or confidential content</h2>
+      <p>Retainory is designed for ordinary study material.</p>
+      <p>
+        You should not submit information that is unnecessary for your study
+        request or information you are not authorized to disclose.
+      </p>
+      <p>
+        In particular, avoid submitting highly sensitive or confidential
+        information such as:
+      </p>
+      <ul>
+        <li>passwords or authentication credentials;</li>
+        <li>Social Security numbers or similar government identifiers;</li>
+        <li>payment-card information;</li>
+        <li>private banking information;</li>
+        <li>highly confidential medical records;</li>
+        <li>legally privileged material;</li>
+        <li>another person's confidential academic records;</li>
+        <li>confidential employment information;</li>
+        <li>trade secrets; or</li>
+        <li>another person's sensitive personal information.</li>
+      </ul>
+      <p>
+        Retainory does not require this type of information to generate
+        ordinary study flashcards.
+      </p>
+      <p>
+        Because users may submit free-form text or documents, Retainory cannot
+        prevent a user from placing sensitive information inside a generation
+        request.
+      </p>
+      <p>
+        If you voluntarily include such information, it will be processed as
+        part of the generation request in the same manner as the rest of the
+        submitted material.
+      </p>
+      <p>
+        Retainory does not use submitted study material to train a
+        Retainory-owned generative AI model.
+      </p>
+
+      <h2>9. Installation identifier</h2>
+      <p>
+        When Retainory is installed, the app generates a random installation
+        identifier.
+      </p>
+      <p>This installation identifier is created by Retainory. It is not:</p>
+      <ul>
+        <li>your Apple ID;</li>
+        <li>the IDFA;</li>
+        <li>the IDFV;</li>
+        <li>your phone number;</li>
+        <li>your email address;</li>
+        <li>your device serial number; or</li>
+        <li>another Apple-assigned advertising identifier.</li>
+      </ul>
+      <p>
+        We use the installation identifier to associate limited technical
+        events with the same Retainory installation without requiring an
+        account or knowing the user's real-world identity.
+      </p>
+      <p>Reinstalling Retainory generates a new installation identifier.</p>
+      <p>
+        Retainory does not maintain a mechanism designed to link the newly
+        generated installation identifier with the installation identifier
+        from the prior installation.
+      </p>
+      <p>
+        Although we do not intentionally link this identifier to your name or
+        other direct identity information, privacy laws may classify
+        persistent or pseudonymous identifiers as personal information or
+        personal data. We therefore describe and protect this identifier
+        accordingly.
+      </p>
+
+      <h2>10. Usage events</h2>
+      <p>
+        Retainory sends limited usage events to help us understand whether
+        important application flows work and how product features are being
+        used.
+      </p>
+      <p>Examples may include:</p>
+      <ul>
+        <li>whether an onboarding step completed;</li>
+        <li>whether a generation request succeeded or failed;</li>
+        <li>which application flow generated an event;</li>
+        <li>timestamps; and</li>
+        <li>internal technical or request identifiers.</li>
+      </ul>
+      <p>
+        Usage events may be associated with the random installation identifier
+        described above.
+      </p>
+      <p>Usage telemetry does not include:</p>
+      <ul>
+        <li>your saved flashcards;</li>
+        <li>flashcard questions or answers;</li>
+        <li>your study notes;</li>
+        <li>your submitted PDFs;</li>
+        <li>your pasted generation material;</li>
+        <li>your study objectives or subjects; or</li>
+        <li>your exact age or date of birth.</li>
+      </ul>
+      <p>We use these events for purposes such as:</p>
+      <ul>
+        <li>identifying broken application flows;</li>
+        <li>debugging failures;</li>
+        <li>measuring whether features operate correctly;</li>
+        <li>understanding aggregate product usage; and</li>
+        <li>improving Retainory.</li>
+      </ul>
+      <p>
+        Retainory does not use a third-party advertising, attribution, or
+        analytics SDK for this telemetry.
+      </p>
+
+      <h2>11. Apple App Attest and device integrity</h2>
+      <p>
+        Retainory uses Apple's App Attest technology, which is part of Apple's
+        DeviceCheck framework.
+      </p>
+      <p>
+        App Attest helps us determine whether requests to our backend
+        originate from a genuine instance of Retainory running in an expected
+        Apple environment.
+      </p>
+      <p>
+        App Attest creates cryptographic information, including a public key
+        identifier associated with an application attestation key.
+      </p>
+      <p>Retainory uses the App Attest key identifier for two principal purposes:</p>
+      <ol>
+        <li>
+          verifying the authenticity and integrity of requests sent to
+          Retainory's backend; and
+        </li>
+        <li>
+          enforcing per-device generation limits so one application
+          installation cannot unfairly consume generation capacity.
+        </li>
+      </ol>
+      <p>
+        Retainory may retain the relevant App Attest key identifier and
+        associated per-device generation counters while the associated app
+        installation remains installed and in active use.
+      </p>
+      <p>
+        We do not intentionally associate the App Attest identifier with a
+        name, email address, Apple ID, or Retainory account.
+      </p>
+      <p>
+        Because it can distinguish an attestation key or installation for
+        security purposes, we treat it as pseudonymous technical information
+        rather than claiming that it can never constitute personal information
+        under applicable privacy law.
+      </p>
+
+      <h2>12. IP addresses and rate limiting</h2>
+      <p>
+        Like other internet services, Retainory's backend receives network
+        connection information when your device makes an online request.
+      </p>
+      <p>Retainory uses the client IP address transiently for purposes such as:</p>
+      <ul>
+        <li>rate limiting;</li>
+        <li>preventing automated abuse;</li>
+        <li>protecting generation capacity; and</li>
+        <li>securing the Service.</li>
+      </ul>
+      <p>
+        Where Retainory persists an IP-derived value as a rate-limit counter
+        key, the backend stores a one-way SHA-256-derived value rather than
+        storing the plaintext IP address as that counter key.
+      </p>
+      <p>
+        IP-derived rate-limit information is retained only for as long as
+        reasonably necessary to operate and enforce Retainory's rate-limiting
+        and abuse-prevention controls.
+      </p>
+      <p>
+        Retainory does not use IP addresses or IP-derived identifiers for
+        advertising, cross-app tracking, or behavioral advertising profiles.
+      </p>
+
+      <h2>13. Application logs</h2>
+      <p>
+        Retainory generates limited operational logs to help operate, secure,
+        and diagnose the backend.
+      </p>
+      <p>
+        Retainory's own application-level logs are designed not to contain raw
+        IP addresses or raw App Attest key identifiers.
+      </p>
+      <p>
+        Before certain technical identifiers are written to Retainory's
+        application logs, Retainory converts them into truncated HMAC-SHA256
+        tags using a server-side secret.
+      </p>
+      <p>
+        This is intended to reduce exposure of raw technical identifiers while
+        preserving limited operational ability to recognize repeated technical
+        activity where necessary.
+      </p>
+      <p>
+        HMAC-tagged values are not used for advertising or to identify users
+        by name.
+      </p>
+
+      <h2>14. Google Cloud infrastructure logs</h2>
+      <p>
+        Retainory's application-level logging is separate from the
+        infrastructure-level logging performed by Google Cloud.
+      </p>
+      <p>
+        Google Cloud Run and related Google Cloud infrastructure may
+        independently process or record ordinary connection and operational
+        metadata associated with requests to the hosted service.
+      </p>
+      <p>Depending on Google's infrastructure and configuration, this may include information such as:</p>
+      <ul>
+        <li>source network information;</li>
+        <li>IP address;</li>
+        <li>request timing;</li>
+        <li>service status;</li>
+        <li>error information; and</li>
+        <li>other ordinary cloud-service operational metadata.</li>
+      </ul>
+      <p>
+        The 30-day Retainory application-log retention period described below
+        should not be read as a promise that every Google-controlled
+        infrastructure log is deleted within 30 days.
+      </p>
+      <p>
+        Infrastructure-level records maintained independently by Google are
+        subject to the applicable Google Cloud configuration, contractual
+        terms, technical requirements, and legal obligations.
+      </p>
+
+      <h2>15. Information you send us directly</h2>
+      <p>
+        If you contact Retainory by email or otherwise communicate with us
+        directly, we receive the information you choose to provide.
+      </p>
+      <p>This may include:</p>
+      <ul>
+        <li>your email address;</li>
+        <li>your name, if you choose to provide it;</li>
+        <li>the contents of your message;</li>
+        <li>attachments you choose to send; and</li>
+        <li>information reasonably necessary to respond to your request.</li>
+      </ul>
+      <p>We use direct communications to:</p>
+      <ul>
+        <li>answer support questions;</li>
+        <li>respond to privacy requests;</li>
+        <li>investigate complaints;</li>
+        <li>address security issues;</li>
+        <li>resolve disputes; and</li>
+        <li>comply with legal obligations.</li>
+      </ul>
+      <p>
+        Do not send sensitive study material through a support email unless it
+        is necessary to resolve your issue.
+      </p>
+      <p>
+        We retain direct communications for as long as reasonably necessary
+        for the purpose of the communication, dispute resolution, security,
+        recordkeeping, or applicable legal obligations.
+      </p>
+
+      <h2>16. What Retainory does not do</h2>
+      <p>Under Retainory's current architecture:</p>
+      <ul>
+        <li>we do not require a Retainory account;</li>
+        <li>we do not require sign-in;</li>
+        <li>we do not maintain a conventional server-side study profile;</li>
+        <li>we do not show third-party advertising;</li>
+        <li>we do not sell personal information;</li>
+        <li>
+          we do not share personal information for cross-context behavioral
+          advertising;
+        </li>
+        <li>we do not provide personal information to data brokers;</li>
+        <li>
+          we do not track users across other companies' apps or websites;
+        </li>
+        <li>we do not use the IDFA for advertising;</li>
+        <li>we do not integrate third-party advertising SDKs;</li>
+        <li>we do not integrate third-party attribution SDKs;</li>
+        <li>we do not integrate third-party analytics SDKs;</li>
+        <li>we do not request access to your contacts;</li>
+        <li>we do not request access to your photo library;</li>
+        <li>we do not request your precise or approximate location;</li>
+        <li>we do not request access to your microphone;</li>
+        <li>we do not request access to your camera; and</li>
+        <li>
+          we do not use your study material to train a Retainory-owned
+          generative AI model.
+        </li>
+      </ul>
+      <p>
+        If these practices materially change, this Privacy Policy and
+        applicable App Store disclosures will be updated.
+      </p>
+
+      <h2>17. How we use information</h2>
+      <p>
+        We use the limited information described in this Privacy Policy for
+        the following purposes.
+      </p>
+      <h3>Providing requested AI functionality</h3>
+      <p>
+        We process material that an eligible user explicitly submits so that
+        Retainory can generate the flashcards the user requested.
+      </p>
+      <h3>Operating Retainory</h3>
+      <p>
+        We process technical information necessary to send and receive
+        network requests and operate online features.
+      </p>
+      <h3>Reliability and debugging</h3>
+      <p>
+        We process limited usage and operational information to identify
+        failures, broken flows, errors, and performance problems.
+      </p>
+      <h3>Product improvement</h3>
+      <p>
+        We use limited usage events to understand how Retainory features are
+        used and whether they work as expected. We do not include study
+        content in this telemetry.
+      </p>
+      <h3>Security and abuse prevention</h3>
+      <p>
+        We process App Attest information, IP-related information, request
+        information, generation counters, and operational logs to:
+      </p>
+      <ul>
+        <li>authenticate genuine app requests;</li>
+        <li>detect abuse;</li>
+        <li>apply rate limits;</li>
+        <li>enforce per-device and global generation limits;</li>
+        <li>protect Retainory infrastructure; and</li>
+        <li>protect third-party service capacity.</li>
+      </ul>
+      <h3>Legal obligations</h3>
+      <p>
+        We may process or preserve information where reasonably necessary to
+        comply with applicable law, valid legal process, enforceable
+        governmental requests, or to establish, exercise, or defend legal
+        claims.
+      </p>
+
+      <h2>18. Service providers</h2>
+      <p>
+        Retainory intentionally uses a limited number of outside providers to
+        operate the Service.
+      </p>
+      <h3>Google Cloud</h3>
+      <p>Retainory uses Google Cloud, including Google Cloud Run, to host its backend.</p>
+      <p>
+        Google Cloud processes technical, connection, operational, and
+        customer data as necessary to provide the hosted infrastructure.
+      </p>
+      <p>
+        Retainory's current backend is hosted in the United States in the
+        <code>us-central1</code> region.
+      </p>
+      <h3>Google Gemini API</h3>
+      <p>
+        Google's Gemini API receives study material only when an AI-eligible
+        user intentionally initiates an AI flashcard-generation request.
+      </p>
+      <p>
+        Under Retainory's current paid-service configuration, Google's current
+        terms state that prompts and responses are processed under Google's
+        applicable data-processing terms and are not used to improve Google's
+        products.
+      </p>
+      <p>Google may nevertheless perform limited logging and other processing described in Section 7.</p>
+      <h3>Apple</h3>
+      <p>
+        Apple distributes Retainory through the App Store and provides
+        technologies used by Retainory, including App Attest and DeviceCheck.
+      </p>
+      <p>
+        Apple may independently process information associated with the App
+        Store, Apple accounts, Apple devices, App Attest, DeviceCheck, or
+        other Apple services.
+      </p>
+      <p>
+        Apple's independent processing is governed by Apple's own privacy
+        policies and agreements.
+      </p>
+
+      <h2>19. Retention</h2>
+      <p>Retainory follows different retention rules depending on the information involved.</p>
+      <h3>Local study data</h3>
+      <p>Your normal Retainory study library remains on your device. Retainory does not maintain a server-side copy.</p>
+      <h3>AI generation material</h3>
+      <p>
+        Retainory's application backend processes submitted generation
+        material in memory and does not intentionally persist a server-side
+        copy after servicing the request.
+      </p>
+      <p>
+        Google may retain or log prompts and responses for a limited period
+        under the terms applicable to the paid Gemini API, including for
+        security, prohibited-use detection, and required legal or regulatory
+        disclosures.
+      </p>
+      <h3>Usage events</h3>
+      <p>Retainory usage events are retained for up to 30 days and then deleted.</p>
+      <h3>Retainory application-level operational logs</h3>
+      <p>Retainory application-level operational logs are retained for up to 30 days and then deleted.</p>
+      <h3>App Attest identifiers and per-device generation counters</h3>
+      <p>
+        These may be retained while the associated Retainory installation
+        remains installed and in active use, as necessary to authenticate
+        requests and enforce generation limits.
+      </p>
+      <h3>IP-derived rate-limit keys</h3>
+      <p>
+        These are retained according to the period reasonably necessary to
+        operate the relevant rate-limit or abuse-prevention control. The
+        retained rate-limit key is derived from the IP address rather than
+        stored as the plaintext IP address.
+      </p>
+      <h3>Google infrastructure logs</h3>
+      <p>
+        Google-controlled platform or infrastructure logs may follow Google
+        Cloud's applicable technical configuration, contractual retention
+        rules, security requirements, and legal obligations. Retainory does
+        not represent that every Google-controlled platform log follows
+        Retainory's 30-day application-log retention period.
+      </p>
+      <h3>Legal preservation</h3>
+      <p>
+        Information may be retained longer where reasonably necessary to
+        comply with applicable law, valid legal process, security obligations,
+        or to establish, exercise, or defend legal claims.
+      </p>
+
+      <h2>20. Security</h2>
+      <p>
+        We use technical and organizational measures intended to reduce the
+        risk of unauthorized access, misuse, interception, or disclosure.
+      </p>
+      <p>Current measures include:</p>
+      <ul>
+        <li>TLS encryption for data transmitted between the application and Retainory's backend;</li>
+        <li>Apple App Attest-based request integrity controls;</li>
+        <li>cryptographic request validation;</li>
+        <li>per-IP and per-device anti-abuse controls;</li>
+        <li>generation budgets and rate limits;</li>
+        <li>HMAC-tagging of certain technical identifiers in Retainory application logs;</li>
+        <li>limited retention of usage and application-level operational logs;</li>
+        <li>
+          server-side handling of backend credentials rather than embedding
+          backend service secrets directly in the iOS client; and
+        </li>
+        <li>
+          an architecture in which ordinary study data remains local to the
+          device rather than being maintained in a Retainory cloud account.
+        </li>
+      </ul>
+      <p>No method of electronic storage, transmission, authentication, or security is completely secure.</p>
+      <p>We therefore cannot guarantee absolute security.</p>
+      <p>
+        Retainory does not claim that Retainory itself has obtained SOC 2, ISO
+        27001, or another independent security certification unless we
+        expressly state that such a certification has actually been obtained.
+      </p>
+
+      <h2>21. No sale, advertising sharing, or cross-app tracking</h2>
+      <p>Retainory does not sell personal information.</p>
+      <p>Retainory does not share personal information for cross-context behavioral advertising.</p>
+      <p>
+        Retainory does not use personal information to track you across other
+        companies' apps or websites for targeted advertising or advertising
+        measurement.
+      </p>
+      <p>Retainory does not provide data to data brokers.</p>
+      <p>
+        Because Retainory does not currently sell or engage in qualifying
+        sharing of personal information for cross-context behavioral
+        advertising, there is currently no sale or qualifying sharing from
+        which a user needs to opt out through a "Do Not Sell or Share My
+        Personal Information" mechanism.
+      </p>
+      <p>
+        If this practice changes, we will update this Privacy Policy and
+        implement legally required privacy controls before engaging in the
+        changed practice.
+      </p>
+
+      <h2>22. Your privacy choices</h2>
+      <h3>Local study information</h3>
+      <p>
+        Because your study library is stored locally, you can control that
+        information through Retainory and your device.
+      </p>
+      <p>
+        Deleting the relevant study data from the app removes the local data
+        according to the application's functionality.
+      </p>
+      <p>
+        Deleting Retainory removes the app's locally stored Retainory data
+        from the device, subject to any independent device-level backup
+        system controlled by Apple.
+      </p>
+      <h3>AI generation</h3>
+      <p>You are not required to use AI generation merely to use eligible manual study features.</p>
+      <p>
+        If you do not want study material transmitted to Retainory's backend
+        and Gemini, do not initiate an AI generation request.
+      </p>
+      <h3>Communications</h3>
+      <p>You can choose what information to provide when contacting Retainory.</p>
+
+      <h2>23. Privacy rights and requests</h2>
+      <p>
+        Depending on where you live, you may have rights concerning personal
+        information that Retainory processes.
+      </p>
+      <p>These rights may include rights to:</p>
+      <ul>
+        <li>obtain information about processing;</li>
+        <li>request access;</li>
+        <li>request correction;</li>
+        <li>request deletion;</li>
+        <li>request restriction of certain processing;</li>
+        <li>object to certain processing;</li>
+        <li>receive certain data in a portable format;</li>
+        <li>withdraw consent where consent is the legal basis;</li>
+        <li>
+          opt out of certain sale, sharing, profiling, or targeted-advertising
+          practices where applicable; and
+        </li>
+        <li>complain to an applicable privacy or data-protection regulator.</li>
+      </ul>
+      <p>Retainory does not maintain user accounts or a real-world identity database.</p>
+      <p>
+        As a result, we may be unable to determine that a particular
+        pseudonymous installation identifier, log entry, rate-limit value, or
+        technical event belongs to you.
+      </p>
+      <p>
+        We will not collect substantially more identity information merely to
+        identify a technical record unless applicable law requires us to do
+        so.
+      </p>
+      <p>
+        If we can reasonably verify and locate personal information associated
+        with you, we will respond to applicable privacy requests as required
+        by law.
+      </p>
+      <p>To submit a privacy request, email <a href="mailto:retainory@gmail.com">retainory@gmail.com</a>.</p>
+      <p>Please use the subject line: <strong>Privacy Request</strong></p>
+      <p>
+        We may ask for information reasonably necessary to understand,
+        verify, and fulfill the request.
+      </p>
+
+      <h2>24. California privacy information</h2>
+      <p>
+        This section applies to California residents to the extent California
+        privacy law applies to Retainory.
+      </p>
+      <p>
+        Some obligations under the California Consumer Privacy Act, as
+        amended by the California Privacy Rights Act ("CCPA"), apply only to
+        entities that meet statutory applicability thresholds.
+      </p>
+      <p>
+        Whether or not every CCPA obligation presently applies to Retainory,
+        the factual descriptions of our practices in this Privacy Policy are
+        intended to remain accurate.
+      </p>
+
+      <h3>Categories of personal information</h3>
+      <p>Depending on how you use Retainory, we may process categories that can include:</p>
+      <p><strong>Identifiers and technical identifiers.</strong> Examples include:</p>
+      <ul>
+        <li>the random Retainory installation identifier;</li>
+        <li>App Attest key identifiers;</li>
+        <li>transient IP addresses;</li>
+        <li>IP-derived rate-limit identifiers; and</li>
+        <li>technical request identifiers.</li>
+      </ul>
+      <p><strong>Internet or electronic network activity.</strong> Examples include:</p>
+      <ul>
+        <li>feature-use events;</li>
+        <li>request activity;</li>
+        <li>success or failure events;</li>
+        <li>timestamps;</li>
+        <li>technical logs; and</li>
+        <li>service diagnostic information.</li>
+      </ul>
+      <p>
+        <strong>User-provided content.</strong> This includes material
+        intentionally submitted for AI flashcard generation.
+      </p>
+      <p>
+        <strong>Communications.</strong> If you contact Retainory, we may
+        process your email address and information you include in your
+        message.
+      </p>
+      <p>
+        <strong>Potential sensitive personal information contained in
+        submitted material.</strong> Retainory does not request sensitive
+        information as a condition of ordinary AI generation. However,
+        free-form text or PDFs could contain sensitive information if a user
+        voluntarily submits it.
+      </p>
+
+      <h3>Sources</h3>
+      <p>We obtain this information:</p>
+      <ul>
+        <li>directly from your use of Retainory;</li>
+        <li>directly from material you choose to submit;</li>
+        <li>automatically from application and network interactions;</li>
+        <li>through Apple App Attest;</li>
+        <li>from our service providers in connection with operating Retainory; and</li>
+        <li>directly from you if you contact us.</li>
+      </ul>
+
+      <h3>Business purposes</h3>
+      <p>We use this information for the purposes described in this Privacy Policy, including:</p>
+      <ul>
+        <li>providing requested functionality;</li>
+        <li>security;</li>
+        <li>fraud and abuse prevention;</li>
+        <li>debugging;</li>
+        <li>analytics concerning product functionality;</li>
+        <li>service reliability;</li>
+        <li>support; and</li>
+        <li>legal compliance.</li>
+      </ul>
+
+      <h3>Sale and sharing</h3>
+      <p>Retainory does not sell personal information.</p>
+      <p>Retainory does not share personal information for cross-context behavioral advertising.</p>
+
+      <h3>California rights</h3>
+      <p>Where the CCPA applies, California residents may have rights including:</p>
+      <ul>
+        <li>the right to know what personal information has been collected;</li>
+        <li>the right to access certain personal information;</li>
+        <li>the right to request deletion, subject to exceptions;</li>
+        <li>the right to request correction;</li>
+        <li>the right to opt out of sale or sharing;</li>
+        <li>
+          the right to limit certain uses or disclosures of sensitive
+          personal information where applicable; and
+        </li>
+        <li>
+          the right not to receive discriminatory treatment for exercising
+          applicable rights.
+        </li>
+      </ul>
+      <p>
+        Because Retainory does not sell or share personal information as
+        those terms are used for cross-context behavioral advertising, there
+        is currently no such sale or sharing to opt out of.
+      </p>
+      <p>Requests may be submitted to <a href="mailto:retainory@gmail.com">retainory@gmail.com</a>.</p>
+
+      <h2>25. European Economic Area and EU GDPR</h2>
+      <p>This section applies where the European Union General Data Protection Regulation ("EU GDPR") applies.</p>
+      <h3>Controller</h3>
+      <p>The controller is:</p>
+      <p>
+        Mauricio Salinas<br />
+        Individual operator of Retainory<br />
+        Chicago, Illinois, United States<br />
+        Email: <a href="mailto:retainory@gmail.com">retainory@gmail.com</a>
+      </p>
+      <h3>Legal bases</h3>
+      <p>Where EU GDPR requires a legal basis, Retainory relies on the following bases.</p>
+      <p>
+        <strong>AI generation content.</strong> Processing material you
+        intentionally submit for generation is necessary to provide the AI
+        generation service that you specifically requested and to perform our
+        agreement with you.
+      </p>
+      <p>
+        <strong>Usage events.</strong> We rely on our legitimate interests in
+        understanding whether Retainory is functioning correctly, diagnosing
+        problems, maintaining the product, and improving functionality while
+        limiting telemetry and excluding study content.
+      </p>
+      <p>
+        <strong>App Attest, IP processing, request integrity, rate limits,
+        security logs, and generation limits.</strong> We rely on legitimate
+        interests in:
+      </p>
+      <ul>
+        <li>protecting Retainory;</li>
+        <li>authenticating genuine requests;</li>
+        <li>preventing fraud and abuse;</li>
+        <li>maintaining availability;</li>
+        <li>protecting infrastructure;</li>
+        <li>controlling generation costs; and</li>
+        <li>providing fair access to limited generation capacity.</li>
+      </ul>
+      <p>
+        <strong>Direct communications.</strong> We process communications as
+        necessary to respond to your request, perform our agreement with you,
+        comply with legal obligations, or pursue legitimate interests in
+        support and dispute resolution, depending on the circumstances.
+      </p>
+      <p>
+        <strong>Legal compliance.</strong> Where required, we process
+        information to comply with a legal obligation.
+      </p>
+      <p>We do not rely on legitimate interests where those interests are overridden by applicable rights and freedoms.</p>
+      <p>We apply particular care where processing relates to younger users.</p>
+      <h3>EU GDPR rights</h3>
+      <p>Subject to applicable conditions and exceptions, you may have rights to:</p>
+      <ul>
+        <li>access personal data;</li>
+        <li>rectify inaccurate personal data;</li>
+        <li>request erasure;</li>
+        <li>restrict processing;</li>
+        <li>object to legitimate-interest processing;</li>
+        <li>receive certain data in portable form;</li>
+        <li>withdraw consent where consent is used;</li>
+        <li>lodge a complaint with an applicable supervisory authority; and</li>
+        <li>exercise applicable rights concerning automated decision-making.</li>
+      </ul>
+      <p>
+        Retainory does not use server-side automated decision-making or
+        profiling intended to produce legal or similarly significant effects
+        concerning users.
+      </p>
+      <p>
+        The on-device age eligibility rule determines feature availability
+        based on the age category the user selects.
+      </p>
+      <p>
+        The FSRS study scheduler determines suggested review timing for study
+        purposes and does not make legal or similarly significant decisions
+        about you.
+      </p>
+      <h3>Representative</h3>
+      <p>
+        Retainory is operated from the United States and does not currently
+        have an establishment in the European Economic Area.
+      </p>
+      <p>
+        Where applicable law requires Retainory to designate a representative
+        in the European Union, Retainory will maintain that designation and
+        make the representative's contact information available in this
+        Privacy Policy or an accompanying privacy notice.
+      </p>
+      <p>
+        You may always contact the controller directly at
+        <a href="mailto:retainory@gmail.com">retainory@gmail.com</a>.
+      </p>
+
+      <h2>26. United Kingdom privacy information</h2>
+      <p>Where the UK GDPR applies, Mauricio Salinas is the controller for Retainory.</p>
+      <p>Contact:</p>
+      <p>
+        Mauricio Salinas<br />
+        Chicago, Illinois, United States<br />
+        Email: <a href="mailto:retainory@gmail.com">retainory@gmail.com</a>
+      </p>
+      <p>
+        The purposes and legal bases described in Section 25 apply under the
+        UK GDPR to the extent corresponding UK law recognizes those bases.
+      </p>
+      <p>Subject to applicable law, UK users may have rights to:</p>
+      <ul>
+        <li>access;</li>
+        <li>rectification;</li>
+        <li>erasure;</li>
+        <li>restriction;</li>
+        <li>portability;</li>
+        <li>objection;</li>
+        <li>withdrawal of consent where applicable; and</li>
+        <li>complaint to the UK Information Commissioner's Office.</li>
+      </ul>
+      <p>Retainory is operated from the United States and does not currently have a UK establishment.</p>
+      <p>
+        Where UK law requires Retainory to designate a UK representative,
+        Retainory will maintain that designation and make the
+        representative's contact information available in this Privacy
+        Policy or an accompanying privacy notice.
+      </p>
+      <p>
+        You may always contact Retainory directly at
+        <a href="mailto:retainory@gmail.com">retainory@gmail.com</a>.
+      </p>
+
+      <h2>27. International processing and transfers</h2>
+      <p>Retainory is operated from the United States.</p>
+      <p>Retainory's backend currently runs in the United States.</p>
+      <p>
+        If you use Retainory from another country, the limited information
+        described in this Privacy Policy may be transmitted to or processed
+        in the United States.
+      </p>
+      <p>
+        Google may also process information in other countries where Google
+        or its service providers maintain facilities, subject to its
+        applicable contractual terms and legal obligations.
+      </p>
+      <p>
+        Where applicable privacy law requires safeguards for international
+        transfers, Retainory uses or relies on legally recognized transfer
+        mechanisms available under the applicable service-provider
+        agreements.
+      </p>
+      <p>
+        For Google Cloud and applicable paid Gemini processing, Google's
+        current data-processing terms provide mechanisms for restricted
+        transfers that may include approved Standard Contractual Clauses or
+        another legally recognized transfer solution, depending on the
+        circumstances.
+      </p>
+      <p>No international-transfer mechanism removes your rights under applicable privacy law.</p>
+
+      <h2>28. Children and teenagers</h2>
+      <p>Retainory is not directed to children under 13.</p>
+      <p>Children under 13 may not use Retainory.</p>
+      <p>The age eligibility process occurs locally.</p>
+      <p>
+        Retainory does not send the user's exact age or date of birth to the
+        backend, telemetry systems, Google Cloud, or Gemini for the purpose of
+        determining age eligibility.
+      </p>
+      <p>A user who indicates that they are under 13 is not eligible to continue using Retainory.</p>
+      <p>
+        Users who indicate that they are between ages 13 and 17 may use
+        eligible manual study features but are not eligible for Retainory's
+        AI generation functionality.
+      </p>
+      <p>
+        If we obtain actual knowledge that we have collected personal
+        information online from a child under 13 in circumstances subject to
+        the Children's Online Privacy Protection Act ("COPPA") without the
+        authorization required by law, we will take appropriate steps
+        required by applicable law, which may include deleting information
+        reasonably identifiable as relating to that child.
+      </p>
+      <p>
+        If you believe a child under 13 has provided information to
+        Retainory, contact
+        <a href="mailto:retainory@gmail.com">retainory@gmail.com</a>.
+      </p>
+      <p>
+        Retainory should not be used to submit another child's personal,
+        medical, educational, or confidential information for AI processing.
+      </p>
+
+      <h2>29. Users in other jurisdictions</h2>
+      <p>Privacy and data-protection laws vary by jurisdiction.</p>
+      <p>
+        If the law where you live provides privacy rights beyond those
+        specifically described in this Privacy Policy, Retainory will honor
+        applicable non-waivable rights to the extent required by law.
+      </p>
+      <p>
+        You may contact
+        <a href="mailto:retainory@gmail.com">retainory@gmail.com</a> to
+        submit a request or ask whether a particular local right applies to
+        Retainory's processing.
+      </p>
+
+      <h2>30. Automated processing</h2>
+      <p>Retainory uses software algorithms as part of ordinary application functionality. For example:</p>
+      <ul>
+        <li>the local age eligibility state determines whether AI functionality is made available;</li>
+        <li>FSRS calculates study-review scheduling; and</li>
+        <li>
+          automated security systems may apply rate limits or refuse requests
+          that fail integrity or abuse-prevention checks.
+        </li>
+      </ul>
+      <p>These systems are used to operate the app, secure the Service, and provide study functionality.</p>
+      <p>
+        Retainory does not use this automated processing to make decisions
+        concerning matters such as employment, credit, housing, insurance,
+        legal status, or other decisions intended to produce legal or
+        similarly significant effects.
+      </p>
+
+      <h2>31. Changes to this Privacy Policy</h2>
+      <p>We may update this Privacy Policy when:</p>
+      <ul>
+        <li>Retainory's functionality changes;</li>
+        <li>our service providers change;</li>
+        <li>our data practices change;</li>
+        <li>applicable law changes;</li>
+        <li>security practices change; or</li>
+        <li>another legitimate reason requires an update.</li>
+      </ul>
+      <p>When the policy changes, we will update the "Last updated" date.</p>
+      <p>
+        If a change materially affects how Retainory collects, uses, retains,
+        or discloses personal information, we will provide reasonable notice
+        through Retainory, retainory.com, or another appropriate method
+        before the change takes effect where required by law.
+      </p>
+      <p>
+        If applicable law requires consent for a changed processing activity,
+        we will obtain the required consent before relying on that
+        processing.
+      </p>
+
+      <h2>32. Contact us</h2>
+      <p>For privacy questions, complaints, or privacy-rights requests, contact:</p>
+      <p>
+        Mauricio Salinas<br />
+        Individual operator of Retainory<br />
+        Chicago, Illinois, United States<br />
+        Email: <a href="mailto:retainory@gmail.com">retainory@gmail.com</a><br />
+        Website: <a href="/">retainory.com</a>
+      </p>
+      <p>
+        For privacy requests, using the subject line "Privacy Request" will
+        help us identify and respond to your message.
+      </p>
+      <p>This Privacy Policy should be read together with the Retainory <a href="/terms">Terms of Service</a>.</p>
     </main>
 
     <footer class="foot">

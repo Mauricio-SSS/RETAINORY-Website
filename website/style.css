@@ -321,7 +321,8 @@ a {
   margin: 0 0 var(--s7);
 }
 
-.doc ul {
+.doc ul,
+.doc ol {
   padding-left: var(--s5);
 }
 

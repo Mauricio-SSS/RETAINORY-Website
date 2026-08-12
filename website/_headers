@@ -7,20 +7,22 @@
 # the landing page's motion is CSS scroll-driven animation, and every path on that page
 # is pre-computed precisely so no script of ours is required.
 #
-# `script-src`/`connect-src` for static.cloudflareinsights.com exist for exactly one
-# thing: the Cloudflare Web Analytics beacon, which the zone's dashboard (not this repo)
-# injects into every response. It is not code we wrote or can remove from here — turning
-# it off is a Cloudflare dashboard setting, not a deploy. With Web Analytics left on
-# deliberately, this opens the narrowest possible hole for it rather than leaving it
-# silently blocked (which just wastes a request) or opening default-src wide. See
-# "Third-party analytics" in privacy.html for the disclosure this pairs with.
+# `script-src`/`connect-src` exist for exactly one thing: the Cloudflare Web Analytics
+# beacon, which the zone's dashboard (not this repo) injects into every response. It is
+# not code we wrote or can remove from here — turning it off is a Cloudflare dashboard
+# setting, not a deploy. With Web Analytics left on deliberately, this opens the
+# narrowest possible hole for it: script-src for the script itself, and connect-src for
+# both its actual telemetry endpoint (same-origin /cdn-cgi/rum, hence 'self') and the
+# cloudflareinsights.com hosts, rather than leaving it silently blocked (which just
+# wastes a request) or opening default-src wide. See "Cloudflare Web Analytics" in
+# privacy.html Section 2 for the disclosure this pairs with.
 
 /*
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: geolocation=(), microphone=(), camera=(), interest-cohort=()
-  Content-Security-Policy: default-src 'none'; style-src 'self'; font-src 'self'; img-src 'self' data:; script-src https://static.cloudflareinsights.com; connect-src https://cloudflareinsights.com https://static.cloudflareinsights.com; form-action 'none'; frame-ancestors 'none'; base-uri 'none'
+  Content-Security-Policy: default-src 'none'; style-src 'self'; font-src 'self'; img-src 'self' data:; script-src https://static.cloudflareinsights.com; connect-src 'self' https://cloudflareinsights.com https://static.cloudflareinsights.com; form-action 'none'; frame-ancestors 'none'; base-uri 'none'
   # .app is on the HSTS preload list, so browsers already force HTTPS. Sending this
   # anyway covers non-preloaded aliases and keeps the header set consistent.
   Strict-Transport-Security: max-age=31536000; includeSubDomains

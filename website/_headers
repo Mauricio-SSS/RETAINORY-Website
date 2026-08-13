@@ -28,13 +28,36 @@
   Strict-Transport-Security: max-age=31536000; includeSubDomains
 
 # Pages' own default (public, max-age=14400 — four hours) applies to every path this
-# file doesn't override, including HTML and CSS. Nothing here has a content hash in its
-# filename, so a visitor mid-way through that four hours keeps the *previous* deploy
-# regardless of how many times we ship after it — indistinguishable, from the outside,
-# from the fix not having worked at all. The landing page's CSS in particular changed
-# five times in one afternoon chasing a scroll-animation bug; every one of those
-# clobbered the last before a browser had any reason to ask for it again.
-/*.html
+# file doesn't override. Confirmed live that it CANNOT be overridden here for .css
+# specifically — /landing.css and /style.css both kept the 14400 default even with an
+# exact-path (no wildcard) rule below, with matching cf-cache-status: MISS/EXPIRED on
+# both sides ruling out edge-cache lag as the explanation. That's a Cloudflare Pages
+# platform behavior for that extension, not something _headers controls. Nothing here
+# has a content hash in its filename either, so a visitor mid-way through that four
+# hours would otherwise keep the *previous* deploy's CSS regardless of how many times
+# this gets fixed and redeployed in between — indistinguishable, from the outside, from
+# a fix not having worked at all.
+#
+# CSS is cache-busted a different way instead: build.py appends a content-hash query
+# string (?v=...) to every reference to style.css and landing.css, in every page. A
+# changed hash is a new URL, which is a guaranteed cache miss no matter what
+# Cache-Control the previous URL carried — sidesteps the platform limitation rather
+# than fighting it. HTML has no such versioning (it's what visitors actually navigate
+# to and share links to, so its URLs have to stay stable), which is what the override
+# below is still for — plain paths, and it does work for this extension.
+/
   Cache-Control: public, max-age=0, must-revalidate
-/*.css
+/index.html
+  Cache-Control: public, max-age=0, must-revalidate
+/privacy
+  Cache-Control: public, max-age=0, must-revalidate
+/privacy.html
+  Cache-Control: public, max-age=0, must-revalidate
+/terms
+  Cache-Control: public, max-age=0, must-revalidate
+/terms.html
+  Cache-Control: public, max-age=0, must-revalidate
+/support
+  Cache-Control: public, max-age=0, must-revalidate
+/support.html
   Cache-Control: public, max-age=0, must-revalidate

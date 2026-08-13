@@ -671,11 +671,112 @@
    "already in its final state" without scroll-driven animation support.
    ============================================================ */
 
-/* Plain linear 1000 -> 0, drawn during the "entry" range above (see
-   .spine__path and gen_geometry.py's spine-draw comment) — a full screen's
-   worth of scroll from page load, then held fully drawn. */
+/* Stops are pinned to the spine's real arc-length fraction at each section
+   boundary (see gen_geometry.py's spine-draw comment for the "entry" detour
+   this reverts and why), not to a plain linear reveal — the review stages'
+   up-and-down teeth carry far more arc length per pixel than the smooth
+   hero/decay descent does, so a naive linear reveal falls behind the copy
+   it's meant to run beside, worst of all at the very first section. */
 @keyframes spine-draw {
   0.0% { stroke-dashoffset: 1000.0; }
+  0.02% { stroke-dashoffset: 911.0; }
+  0.06% { stroke-dashoffset: 910.5; }
+  0.1% { stroke-dashoffset: 909.9; }
+  0.17% { stroke-dashoffset: 909.1; }
+  0.31% { stroke-dashoffset: 907.3; }
+  0.37% { stroke-dashoffset: 906.5; }
+  0.53% { stroke-dashoffset: 904.4; }
+  0.77% { stroke-dashoffset: 901.2; }
+  0.87% { stroke-dashoffset: 899.9; }
+  1.01% { stroke-dashoffset: 898.1; }
+  1.23% { stroke-dashoffset: 895.2; }
+  1.47% { stroke-dashoffset: 892.0; }
+  1.72% { stroke-dashoffset: 888.9; }
+  1.94% { stroke-dashoffset: 886.0; }
+  2.08% { stroke-dashoffset: 884.1; }
+  2.18% { stroke-dashoffset: 882.8; }
+  2.42% { stroke-dashoffset: 879.7; }
+  2.58% { stroke-dashoffset: 877.5; }
+  2.64% { stroke-dashoffset: 876.8; }
+  2.78% { stroke-dashoffset: 874.9; }
+  2.84% { stroke-dashoffset: 874.1; }
+  2.88% { stroke-dashoffset: 873.6; }
+  2.92% { stroke-dashoffset: 872.9; }
+  2.98% { stroke-dashoffset: 871.7; }
+  3.18% { stroke-dashoffset: 867.0; }
+  3.69% { stroke-dashoffset: 857.8; }
+  4.25% { stroke-dashoffset: 849.3; }
+  5.64% { stroke-dashoffset: 830.3; }
+  7.01% { stroke-dashoffset: 812.1; }
+  8.4% { stroke-dashoffset: 793.8; }
+  9.77% { stroke-dashoffset: 775.8; }
+  11.14% { stroke-dashoffset: 757.9; }
+  12.53% { stroke-dashoffset: 739.7; }
+  13.9% { stroke-dashoffset: 721.8; }
+  15.28% { stroke-dashoffset: 703.6; }
+  16.65% { stroke-dashoffset: 685.7; }
+  18.04% { stroke-dashoffset: 667.5; }
+  18.61% { stroke-dashoffset: 660.1; }
+  19.11% { stroke-dashoffset: 653.6; }
+  19.31% { stroke-dashoffset: 650.9; }
+  19.37% { stroke-dashoffset: 650.1; }
+  19.41% { stroke-dashoffset: 649.6; }
+  19.45% { stroke-dashoffset: 611.4; }
+  19.51% { stroke-dashoffset: 610.5; }
+  19.71% { stroke-dashoffset: 607.6; }
+  20.22% { stroke-dashoffset: 600.6; }
+  20.76% { stroke-dashoffset: 593.1; }
+  22.11% { stroke-dashoffset: 566.5; }
+  23.46% { stroke-dashoffset: 548.6; }
+  24.81% { stroke-dashoffset: 530.8; }
+  26.16% { stroke-dashoffset: 504.6; }
+  27.51% { stroke-dashoffset: 486.8; }
+  28.85% { stroke-dashoffset: 469.1; }
+  30.2% { stroke-dashoffset: 451.4; }
+  31.55% { stroke-dashoffset: 425.2; }
+  32.9% { stroke-dashoffset: 407.5; }
+  34.25% { stroke-dashoffset: 389.9; }
+  34.79% { stroke-dashoffset: 382.7; }
+  35.3% { stroke-dashoffset: 376.1; }
+  35.5% { stroke-dashoffset: 373.5; }
+  35.56% { stroke-dashoffset: 372.7; }
+  35.6% { stroke-dashoffset: 372.2; }
+  35.64% { stroke-dashoffset: 371.7; }
+  35.7% { stroke-dashoffset: 370.9; }
+  35.9% { stroke-dashoffset: 368.2; }
+  36.4% { stroke-dashoffset: 361.6; }
+  36.69% { stroke-dashoffset: 357.9; }
+  37.79% { stroke-dashoffset: 343.5; }
+  38.88% { stroke-dashoffset: 320.8; }
+  39.99% { stroke-dashoffset: 306.3; }
+  41.07% { stroke-dashoffset: 292.0; }
+  42.18% { stroke-dashoffset: 277.5; }
+  43.27% { stroke-dashoffset: 263.3; }
+  44.36% { stroke-dashoffset: 249.1; }
+  45.46% { stroke-dashoffset: 234.6; }
+  46.55% { stroke-dashoffset: 220.3; }
+  47.66% { stroke-dashoffset: 205.9; }
+  47.94% { stroke-dashoffset: 202.2; }
+  48.44% { stroke-dashoffset: 195.6; }
+  48.64% { stroke-dashoffset: 193.0; }
+  48.71% { stroke-dashoffset: 192.2; }
+  48.75% { stroke-dashoffset: 191.6; }
+  48.79% { stroke-dashoffset: 190.6; }
+  48.85% { stroke-dashoffset: 189.0; }
+  49.05% { stroke-dashoffset: 183.6; }
+  49.55% { stroke-dashoffset: 176.3; }
+  49.93% { stroke-dashoffset: 171.3; }
+  51.12% { stroke-dashoffset: 155.8; }
+  52.33% { stroke-dashoffset: 140.0; }
+  53.52% { stroke-dashoffset: 124.5; }
+  54.7% { stroke-dashoffset: 108.9; }
+  55.89% { stroke-dashoffset: 93.4; }
+  57.08% { stroke-dashoffset: 77.9; }
+  58.27% { stroke-dashoffset: 62.4; }
+  59.46% { stroke-dashoffset: 46.8; }
+  60.66% { stroke-dashoffset: 31.0; }
+  61.85% { stroke-dashoffset: 15.5; }
+  63.04% { stroke-dashoffset: 0.0; }
   100.0% { stroke-dashoffset: 0.0; }
 }
 
@@ -709,12 +810,15 @@
       stroke-dashoffset: 1000;
       animation: spine-draw linear both;
       animation-timeline: --spine;
-      /* "entry", not "cover" — see gen_geometry.py's spine-draw comment.
-         entry 0%-100% is exactly one viewport-height of scroll, by
-         definition, with no dependency on .narrative's own height to guess
-         at. The reveal completes within the first screen of scrolling and
-         (animation fill-mode: both, below) holds fully drawn from then on. */
-      animation-range: entry;
+      /* Not "entry": .narrative starts only ~86px below the page's own top
+         (a short nav bar is the only thing above it), so entry 0%-100% — by
+         definition one viewport-height, ~900px — was already ~10% spent
+         before the reader had scrolled at all, and complete within the
+         first ~10% of a single scroll gesture after that. Indistinguishable
+         from a static line. See gen_geometry.py's spine-draw comment for
+         the full account and why "cover", paired with a deliberately
+         generous viewport-height assumption, is back. */
+      animation-range: cover 10% cover 88%;
     }
 
     .node {

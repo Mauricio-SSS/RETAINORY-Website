@@ -678,117 +678,104 @@
    copy it's meant to run beside, worst of all at the very first section. */
 @keyframes spine-draw {
   0.0% { stroke-dashoffset: 1000.0; }
-  1.41% { stroke-dashoffset: 1000.0; }
-  2.84% { stroke-dashoffset: 1000.0; }
-  4.25% { stroke-dashoffset: 1000.0; }
-  5.65% { stroke-dashoffset: 1000.0; }
-  7.09% { stroke-dashoffset: 1000.0; }
-  8.49% { stroke-dashoffset: 994.7; }
-  9.9% { stroke-dashoffset: 980.8; }
-  11.33% { stroke-dashoffset: 966.6; }
-  12.74% { stroke-dashoffset: 952.6; }
-  14.15% { stroke-dashoffset: 938.6; }
-  15.58% { stroke-dashoffset: 924.4; }
-  15.92% { stroke-dashoffset: 921.0; }
-  16.59% { stroke-dashoffset: 914.4; }
-  16.85% { stroke-dashoffset: 911.8; }
-  16.93% { stroke-dashoffset: 911.0; }
-  16.99% { stroke-dashoffset: 910.5; }
-  17.04% { stroke-dashoffset: 909.9; }
-  17.12% { stroke-dashoffset: 909.1; }
-  17.3% { stroke-dashoffset: 907.3; }
-  17.38% { stroke-dashoffset: 906.5; }
-  17.6% { stroke-dashoffset: 904.4; }
-  17.91% { stroke-dashoffset: 901.2; }
-  18.05% { stroke-dashoffset: 899.9; }
-  18.23% { stroke-dashoffset: 898.1; }
-  18.52% { stroke-dashoffset: 895.2; }
-  18.84% { stroke-dashoffset: 892.0; }
-  19.16% { stroke-dashoffset: 888.9; }
-  19.45% { stroke-dashoffset: 886.0; }
-  19.64% { stroke-dashoffset: 884.1; }
-  19.77% { stroke-dashoffset: 882.8; }
-  20.09% { stroke-dashoffset: 879.7; }
-  20.3% { stroke-dashoffset: 877.5; }
-  20.38% { stroke-dashoffset: 876.8; }
-  20.57% { stroke-dashoffset: 874.9; }
-  20.65% { stroke-dashoffset: 874.1; }
-  20.7% { stroke-dashoffset: 873.6; }
-  20.75% { stroke-dashoffset: 872.9; }
-  20.83% { stroke-dashoffset: 871.7; }
-  21.1% { stroke-dashoffset: 867.0; }
-  21.76% { stroke-dashoffset: 857.8; }
-  22.51% { stroke-dashoffset: 849.3; }
-  24.34% { stroke-dashoffset: 830.3; }
-  26.14% { stroke-dashoffset: 812.1; }
-  27.97% { stroke-dashoffset: 793.8; }
-  29.78% { stroke-dashoffset: 775.8; }
-  31.58% { stroke-dashoffset: 757.9; }
-  33.41% { stroke-dashoffset: 739.7; }
-  35.22% { stroke-dashoffset: 721.8; }
-  37.05% { stroke-dashoffset: 703.6; }
-  38.85% { stroke-dashoffset: 685.7; }
-  40.68% { stroke-dashoffset: 667.5; }
-  41.43% { stroke-dashoffset: 660.1; }
-  42.09% { stroke-dashoffset: 653.6; }
-  42.36% { stroke-dashoffset: 650.9; }
-  42.44% { stroke-dashoffset: 650.1; }
-  42.49% { stroke-dashoffset: 649.6; }
-  42.54% { stroke-dashoffset: 611.4; }
-  42.62% { stroke-dashoffset: 610.5; }
-  42.89% { stroke-dashoffset: 607.6; }
-  43.55% { stroke-dashoffset: 600.6; }
-  44.27% { stroke-dashoffset: 593.1; }
-  46.05% { stroke-dashoffset: 566.5; }
-  47.82% { stroke-dashoffset: 548.6; }
-  49.6% { stroke-dashoffset: 530.8; }
-  51.38% { stroke-dashoffset: 504.6; }
-  53.16% { stroke-dashoffset: 486.8; }
-  54.94% { stroke-dashoffset: 469.1; }
-  56.71% { stroke-dashoffset: 451.4; }
-  58.49% { stroke-dashoffset: 425.2; }
-  60.27% { stroke-dashoffset: 407.5; }
-  62.05% { stroke-dashoffset: 389.9; }
-  62.77% { stroke-dashoffset: 382.7; }
-  63.43% { stroke-dashoffset: 376.1; }
-  63.69% { stroke-dashoffset: 373.5; }
-  63.77% { stroke-dashoffset: 372.7; }
-  63.83% { stroke-dashoffset: 372.2; }
-  63.88% { stroke-dashoffset: 371.7; }
-  63.96% { stroke-dashoffset: 370.9; }
-  64.23% { stroke-dashoffset: 368.2; }
-  64.89% { stroke-dashoffset: 361.6; }
-  65.26% { stroke-dashoffset: 357.9; }
-  66.72% { stroke-dashoffset: 343.5; }
-  68.15% { stroke-dashoffset: 320.8; }
-  69.61% { stroke-dashoffset: 306.3; }
-  71.05% { stroke-dashoffset: 292.0; }
-  72.51% { stroke-dashoffset: 277.5; }
-  73.94% { stroke-dashoffset: 263.3; }
-  75.37% { stroke-dashoffset: 249.1; }
-  76.83% { stroke-dashoffset: 234.6; }
-  78.26% { stroke-dashoffset: 220.3; }
-  79.72% { stroke-dashoffset: 205.9; }
-  80.1% { stroke-dashoffset: 202.2; }
-  80.76% { stroke-dashoffset: 195.6; }
-  81.02% { stroke-dashoffset: 193.0; }
-  81.1% { stroke-dashoffset: 192.2; }
-  81.16% { stroke-dashoffset: 191.6; }
-  81.21% { stroke-dashoffset: 190.6; }
-  81.29% { stroke-dashoffset: 189.0; }
-  81.56% { stroke-dashoffset: 183.6; }
-  82.22% { stroke-dashoffset: 176.3; }
-  82.72% { stroke-dashoffset: 171.3; }
-  84.29% { stroke-dashoffset: 155.8; }
-  85.88% { stroke-dashoffset: 140.0; }
-  87.45% { stroke-dashoffset: 124.5; }
-  89.01% { stroke-dashoffset: 108.9; }
-  90.58% { stroke-dashoffset: 93.4; }
-  92.14% { stroke-dashoffset: 77.9; }
-  93.71% { stroke-dashoffset: 62.4; }
-  95.28% { stroke-dashoffset: 46.8; }
-  96.87% { stroke-dashoffset: 31.0; }
-  98.43% { stroke-dashoffset: 15.5; }
+  0.02% { stroke-dashoffset: 911.0; }
+  0.06% { stroke-dashoffset: 910.5; }
+  0.1% { stroke-dashoffset: 909.9; }
+  0.17% { stroke-dashoffset: 909.1; }
+  0.31% { stroke-dashoffset: 907.3; }
+  0.37% { stroke-dashoffset: 906.5; }
+  0.53% { stroke-dashoffset: 904.4; }
+  0.77% { stroke-dashoffset: 901.2; }
+  0.87% { stroke-dashoffset: 899.9; }
+  1.01% { stroke-dashoffset: 898.1; }
+  1.23% { stroke-dashoffset: 895.2; }
+  1.47% { stroke-dashoffset: 892.0; }
+  1.72% { stroke-dashoffset: 888.9; }
+  1.94% { stroke-dashoffset: 886.0; }
+  2.08% { stroke-dashoffset: 884.1; }
+  2.18% { stroke-dashoffset: 882.8; }
+  2.42% { stroke-dashoffset: 879.7; }
+  2.58% { stroke-dashoffset: 877.5; }
+  2.64% { stroke-dashoffset: 876.8; }
+  2.78% { stroke-dashoffset: 874.9; }
+  2.84% { stroke-dashoffset: 874.1; }
+  2.88% { stroke-dashoffset: 873.6; }
+  2.92% { stroke-dashoffset: 872.9; }
+  2.98% { stroke-dashoffset: 871.7; }
+  3.18% { stroke-dashoffset: 867.0; }
+  3.69% { stroke-dashoffset: 857.8; }
+  4.25% { stroke-dashoffset: 849.3; }
+  5.64% { stroke-dashoffset: 830.3; }
+  7.01% { stroke-dashoffset: 812.1; }
+  8.4% { stroke-dashoffset: 793.8; }
+  9.77% { stroke-dashoffset: 775.8; }
+  11.14% { stroke-dashoffset: 757.9; }
+  12.53% { stroke-dashoffset: 739.7; }
+  13.9% { stroke-dashoffset: 721.8; }
+  15.28% { stroke-dashoffset: 703.6; }
+  16.65% { stroke-dashoffset: 685.7; }
+  18.04% { stroke-dashoffset: 667.5; }
+  18.61% { stroke-dashoffset: 660.1; }
+  19.11% { stroke-dashoffset: 653.6; }
+  19.31% { stroke-dashoffset: 650.9; }
+  19.37% { stroke-dashoffset: 650.1; }
+  19.41% { stroke-dashoffset: 649.6; }
+  19.45% { stroke-dashoffset: 611.4; }
+  19.51% { stroke-dashoffset: 610.5; }
+  19.71% { stroke-dashoffset: 607.6; }
+  20.22% { stroke-dashoffset: 600.6; }
+  20.76% { stroke-dashoffset: 593.1; }
+  22.11% { stroke-dashoffset: 566.5; }
+  23.46% { stroke-dashoffset: 548.6; }
+  24.81% { stroke-dashoffset: 530.8; }
+  26.16% { stroke-dashoffset: 504.6; }
+  27.51% { stroke-dashoffset: 486.8; }
+  28.85% { stroke-dashoffset: 469.1; }
+  30.2% { stroke-dashoffset: 451.4; }
+  31.55% { stroke-dashoffset: 425.2; }
+  32.9% { stroke-dashoffset: 407.5; }
+  34.25% { stroke-dashoffset: 389.9; }
+  34.79% { stroke-dashoffset: 382.7; }
+  35.3% { stroke-dashoffset: 376.1; }
+  35.5% { stroke-dashoffset: 373.5; }
+  35.56% { stroke-dashoffset: 372.7; }
+  35.6% { stroke-dashoffset: 372.2; }
+  35.64% { stroke-dashoffset: 371.7; }
+  35.7% { stroke-dashoffset: 370.9; }
+  35.9% { stroke-dashoffset: 368.2; }
+  36.4% { stroke-dashoffset: 361.6; }
+  36.69% { stroke-dashoffset: 357.9; }
+  37.79% { stroke-dashoffset: 343.5; }
+  38.88% { stroke-dashoffset: 320.8; }
+  39.99% { stroke-dashoffset: 306.3; }
+  41.07% { stroke-dashoffset: 292.0; }
+  42.18% { stroke-dashoffset: 277.5; }
+  43.27% { stroke-dashoffset: 263.3; }
+  44.36% { stroke-dashoffset: 249.1; }
+  45.46% { stroke-dashoffset: 234.6; }
+  46.55% { stroke-dashoffset: 220.3; }
+  47.66% { stroke-dashoffset: 205.9; }
+  47.94% { stroke-dashoffset: 202.2; }
+  48.44% { stroke-dashoffset: 195.6; }
+  48.64% { stroke-dashoffset: 193.0; }
+  48.71% { stroke-dashoffset: 192.2; }
+  48.75% { stroke-dashoffset: 191.6; }
+  48.79% { stroke-dashoffset: 190.6; }
+  48.85% { stroke-dashoffset: 189.0; }
+  49.05% { stroke-dashoffset: 183.6; }
+  49.55% { stroke-dashoffset: 176.3; }
+  49.93% { stroke-dashoffset: 171.3; }
+  51.12% { stroke-dashoffset: 155.8; }
+  52.33% { stroke-dashoffset: 140.0; }
+  53.52% { stroke-dashoffset: 124.5; }
+  54.7% { stroke-dashoffset: 108.9; }
+  55.89% { stroke-dashoffset: 93.4; }
+  57.08% { stroke-dashoffset: 77.9; }
+  58.27% { stroke-dashoffset: 62.4; }
+  59.46% { stroke-dashoffset: 46.8; }
+  60.66% { stroke-dashoffset: 31.0; }
+  61.85% { stroke-dashoffset: 15.5; }
+  63.04% { stroke-dashoffset: 0.0; }
   100.0% { stroke-dashoffset: 0.0; }
 }
 
@@ -822,11 +809,14 @@
       stroke-dashoffset: 1000;
       animation: spine-draw linear both;
       animation-timeline: --spine;
-      /* Pixels, not percent — see gen_geometry.py's spine-draw comment for
-         why this specific form is what makes the reveal land in the right
-         place independent of viewport height, where a percentage range
-         (cover 10% cover 88%, this used to read) could not. */
-      animation-range: cover 0px cover 3768px;
+      /* Percent, not pixels — a pixel-valued named range (cover 0px cover
+         3768px) would cancel out viewport height algebraically, but Safari
+         doesn't support that syntax, so it silently fell back to the full,
+         uncompressed 0%-100% of cover instead of failing loudly. Back to
+         plain percentages, universally supported; gen_geometry.py's
+         spine-draw comment explains how the keyframe stops below compensate
+         for what a percentage range can't cancel out on its own. */
+      animation-range: cover 10% cover 88%;
     }
 
     .node {

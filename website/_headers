@@ -26,3 +26,15 @@
   # .app is on the HSTS preload list, so browsers already force HTTPS. Sending this
   # anyway covers non-preloaded aliases and keeps the header set consistent.
   Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+# Pages' own default (public, max-age=14400 — four hours) applies to every path this
+# file doesn't override, including HTML and CSS. Nothing here has a content hash in its
+# filename, so a visitor mid-way through that four hours keeps the *previous* deploy
+# regardless of how many times we ship after it — indistinguishable, from the outside,
+# from the fix not having worked at all. The landing page's CSS in particular changed
+# five times in one afternoon chasing a scroll-animation bug; every one of those
+# clobbered the last before a browser had any reason to ask for it again.
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate
+/*.css
+  Cache-Control: public, max-age=0, must-revalidate

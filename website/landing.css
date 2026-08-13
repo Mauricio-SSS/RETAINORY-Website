@@ -671,10 +671,35 @@
    "already in its final state" without scroll-driven animation support.
    ============================================================ */
 
+/* Stops are pinned to the spine's real arc-length fraction at each section
+   boundary (see gen_geometry.py), not to a plain linear reveal — the review
+   stages' up-and-down teeth carry far more arc length per pixel than the
+   smooth hero/decay descent does, so a naive linear reveal falls behind the
+   copy it's meant to run beside, worst of all at the very first section. */
 @keyframes spine-draw {
-  to {
-    stroke-dashoffset: 0;
-  }
+  0.0% { stroke-dashoffset: 1000.0; }
+  2.19% { stroke-dashoffset: 910.5; }
+  3.01% { stroke-dashoffset: 901.2; }
+  3.83% { stroke-dashoffset: 892.0; }
+  4.65% { stroke-dashoffset: 882.8; }
+  5.47% { stroke-dashoffset: 873.6; }
+  10.27% { stroke-dashoffset: 812.1; }
+  15.08% { stroke-dashoffset: 757.9; }
+  19.91% { stroke-dashoffset: 703.6; }
+  24.72% { stroke-dashoffset: 649.6; }
+  29.43% { stroke-dashoffset: 548.6; }
+  34.14% { stroke-dashoffset: 486.8; }
+  38.86% { stroke-dashoffset: 425.2; }
+  43.57% { stroke-dashoffset: 372.2; }
+  47.39% { stroke-dashoffset: 320.8; }
+  51.24% { stroke-dashoffset: 277.5; }
+  55.06% { stroke-dashoffset: 234.6; }
+  58.88% { stroke-dashoffset: 191.6; }
+  63.05% { stroke-dashoffset: 140.0; }
+  67.2% { stroke-dashoffset: 93.4; }
+  71.35% { stroke-dashoffset: 46.8; }
+  75.53% { stroke-dashoffset: 0.0; }
+  100.0% { stroke-dashoffset: 0.0; }
 }
 
 @keyframes node-in {
